@@ -1,0 +1,129 @@
+{
+ "graph_name": "Movie Graph",
+ "graph_structure": "SimpleGraph",
+ "graph_data": "DocDoc",
+ "graph_vertexes": [
+  {
+   "document_name": "Movie",
+   "id": "tt0068646",
+   "title": "The Godfather",
+   "year": "1972",
+   "genres": [
+    "Crime",
+    "Drama"
+   ]
+  },
+  {
+   "document_name": "Principal",
+   "id": "nm0000008",
+   "name": "Marlon Brando",
+   "birth_year": "1924",
+   "professions": [
+    "actor",
+    "soundtrack",
+    "director"
+   ]
+  },
+  {
+   "document_name": "Principal",
+   "id": "nm0000199",
+   "name": "Al Pacino",
+   "birth_year": "1940",
+   "professions": [
+    "actor",
+    "producer",
+    "soundtrack"
+   ]
+  },
+  {
+   "document_name": "Principal",
+   "id": "nm0000380",
+   "name": "Robert Duvall",
+   "birth_year": "1931",
+   "professions": [
+    "actor",
+    "producer",
+    "soundtrack"
+   ]
+  },
+  {
+   "document_name": "Principal",
+   "id": "nm0000065",
+   "name": "Nino Rota",
+   "birth_year": "1911",
+   "professions": [
+    "composer",
+    "soundtrack",
+    "music_department"
+   ]
+  },
+  {
+   "document_name": "Principal",
+   "id": "nm0000338",
+   "name": "Francis Ford Coppola",
+   "birth_year": "1939",
+   "professions": [
+    "producer",
+    "director",
+    "writer"
+   ]
+  }
+ ],
+ "graph_edges": [
+  {
+   "edge_name": "Actor",
+   "src_vertex_name": "Movie",
+   "dst_vertex_name": "Principal",
+   "graph_document": {
+    "document_name": "Actor",
+    "id": "pr000001",
+    "role": "Actor",
+    "year": "1971"
+   }
+  },
+  {
+   "edge_name": "Actor",
+   "src_vertex_name": "Movie",
+   "dst_vertex_name": "Principal",
+   "graph_document": {
+    "document_name": "Actor",
+    "id": "pr000001",
+    "role": "Actor",
+    "year": "1971"
+   }
+  },
+  {
+   "edge_name": "Actor",
+   "src_vertex_name": "Movie",
+   "dst_vertex_name": "Principal",
+   "graph_document": {
+    "document_name": "Actor",
+    "id": "pr000001",
+    "role": "Actor",
+    "year": "1971"
+   }
+  },
+  {
+   "edge_name": "Composer",
+   "src_vertex_name": "Movie",
+   "dst_vertex_name": "Principal",
+   "graph_document": {
+    "document_name": "Composer",
+    "id": "pr000003",
+    "role": "Composer",
+    "year": "1971"
+   }
+  },
+  {
+   "edge_name": "Director",
+   "src_vertex_name": "Movie",
+   "dst_vertex_name": "Principal",
+   "graph_document": {
+    "document_name": "Director",
+    "id": "pr000002",
+    "role": "Director",
+    "year": "1971"
+   }
+  }
+ ]
+}

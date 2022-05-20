@@ -1,0 +1,4 @@
+row_type[Text](Row Type),label_name[Text](Label Name),schema_items[Text](Schema Items),Google[Text],Wikipedia[Text],JGraphT[Text]
+V,Google,,http://www.google.com,,
+V,Wikipedia,,,http://www.wikipedia.org,
+V,JGraphT,,,,http://www.jgrapht.org

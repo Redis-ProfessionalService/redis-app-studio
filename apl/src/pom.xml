@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- Maven Targets:
+ http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+ mvn install        Install the package into the local repository.
+-->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.redis</groupId>
+	<artifactId>root</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>Redis</name>
+	<description>This source tree contains Redis App Studio community project.</description>
+	<modules>
+		<module>pom</module>
+		<module>foundation</module>
+		<module>tools</module>
+		<module>ds</module>
+	</modules>
+</project>

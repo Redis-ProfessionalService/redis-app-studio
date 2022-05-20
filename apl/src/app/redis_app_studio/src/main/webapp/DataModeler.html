@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="en-US">
+	<head>
+		<title>Movie Data Modeler</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/RW.css">
+		<link rel="shortuc icons" href="images/rw-favicon.ico" type=“image/x-icon”>
+		<link href="images/favicon.ico" rel="icon" type="image/x-icon">
+		<!-- SmartClient JavaScript Runtime Framework -->
+		<script>var isomorphicDir="isomorphic/";</script>
+		<script src="isomorphic/system/modules/ISC_Core.js"></script>
+		<script src="isomorphic/system/modules/ISC_Foundation.js"></script>
+		<script src="isomorphic/system/modules/ISC_Containers.js"></script>
+		<script src="isomorphic/system/modules/ISC_Grids.js"></script>
+		<script src="isomorphic/system/modules/ISC_Forms.js"></script>
+		<script src="isomorphic/system/modules/ISC_DataBinding.js"></script>
+		<script src="isomorphic/skins/Tahoe/load_skin.js"></script>
+		<!-- Pre-load Redis App Studio Data Sources -->
+		<script src="isomorphic/DataSourceLoader?dataSource=DM-ReleaseGrid,DM-ApplicationGrid,DM-SuggestList,DM-SchemaGrid,DM-DataFlatGrid,DM-DataHierGraph,DM-DataHierJSON,DM-DocumentGrid,DM-GenAppForm,DM-AppViewGrid"></script>
+		<!-- Redis App Studio JavaScript Source Files -->
+		<script SRC="js/shared/Application.js"></script>
+		<script SRC="js/dm/DataModeler.js"></script>
+	</head>
+	<body style="overflow:hidden">
+		<script>
+			let appContext = new AppBuilder("Redis App Studio", "Movie Data Modeler").version("1.0")
+					.prefix("DM").appType("CRUD+S").dsStructure("Hierarchy").dsStorage("Filesystem")
+					.dsAppViewName("DM-AppViewGrid").dsAppViewTitle("Internet Movie Database")
+					.dsAppViewRel("DM-AppViewGridRel").dsAppViewRelOut("DM-AppViewGridRelOut")
+					.graphVisualizationURL("http://localhost:8080/redis/isomorphic/visualize/show")
+					.gridHeight(90).loggingEnabled(false).build();
+			// Assign our application context to the global window object
+			window._appContext_ = appContext;
+			// Create our application and show it
+			let dataModeler = new DataModeler(appContext);
+			dataModeler.init();
+			dataModeler.show();
+		</script>
+	</body>
+</html>

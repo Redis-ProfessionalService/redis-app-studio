@@ -1,0 +1,11 @@
+<DataDoc  name="IMDb Edge">
+ <Item type="Text" name="common_vertex_src_id" title="Vertex Src Id" isVisible="true" isHidden="true"/>
+ <Item type="Text" name="common_vertex_dst_id" title="Vertex Dst Id" isVisible="true" isHidden="true"/>
+ <Item type="Text" name="common_edge_direction" title="Edge Direction" isVisible="true"/>
+ <Item type="Text" name="common_id" title="Id" isRequired="true" isVisible="true" isPrimary="true"/>
+ <Item type="Text" name="common_type" title="Edge Type" isVisible="true" rangeType="Text" rangeDelimiterChar="," rangeValues="Composer,Singer,Producer,Actor,Director"/>
+ <Item type="Text" name="common_vertex_name" title="Vertex Name" isVisible="true"/>
+ <Item type="Text" name="contribution" title="Contribution" isVisible="true"/>
+ <Item type="Integer" name="employment_year" title="Employment Year" dataFormat="#" uiFormat="#" isVisible="true"/>
+ <Item type="Text" name="character_name" title="Character Name" isGraphTitle="true" isVisible="true"/>
+</DataDoc>

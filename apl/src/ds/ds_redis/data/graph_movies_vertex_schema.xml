@@ -1,0 +1,14 @@
+<DataDoc name="IMDb Vertex">
+ <Item type="Text" name="common_vertex_label" title="Label" isGraphLabel="true" isVisible="true" rangeType="Text" rangeDelimiterChar="," rangeValues="Movie,Principal"/>
+ <Item type="Text" name="common_id" title="Id" isRequired="true" isVisible="true" isPrimary="true"/>
+ <Item type="Text" name="common_name" title="Name" isRequired="true" uiWidth="175" isGraphTitle="true" isSearch="true" isFullTextSearch="true" isVisible="true"/>
+ <Item type="Text" name="common_summary" title="Summary" isVisible="true" uiWidth="400" uiShowHover="true" isSearch="true" isFullTextSearch="true"/>
+ <Item type="Integer" name="movie_release_year" title="Release Year" dataFormat="#" uiFormat="#" isVisible="true"/>
+ <Item type="Text" name="movie_genres" title="Genres" isVisible="true" isPropertySearch="true" isSearch="true"/>
+ <Item type="Double" name="movie_revenue" title="Revenue" isPropertySearch="true" dataFormat="###,###.####" uiFormat=",0.00" isVisible="true"/>
+ <Item type="Integer" name="principal_birth_year" title="Birth Year" dataFormat="#" uiFormat="#" isVisible="true"/>
+ <Item type="Text" name="principal_professions" title="Professions" isVisible="true" isPropertySearch="true" isSearch="true"/>
+ <Item type="Boolean" name="principal_is_male" title="Is Male" isVisible="true"/>
+ <Item type="Integer" name="principal_height" title="Height" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="principal_eye_color" title="Eye Color" isVisible="true" isPropertySearch="true" />
+</DataDoc>

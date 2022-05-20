@@ -1,0 +1,10 @@
+<DataSource ID="RG-DocCmdGrid" serverConstructor="com.redis.app.redis_app_studio.rg.DocCmdGridDS">
+ <fields>
+  <field name="id" title="Timestamp" type="text" primaryKey="true" width="10%" />
+  <field name="redis_command" title="Command Name" type="text" width="10%" />
+  <field name="redis_parameters" title="Command Parameters" type="text" width="45%" showHover="true" />
+  <field name="command_link" title="Documentation Link" type="text" hidden="true" />
+  <field name="command_description" title="Description" type="text" width="35%" showHover="true" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

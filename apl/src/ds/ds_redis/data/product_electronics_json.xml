@@ -1,0 +1,12 @@
+<DataDoc>
+ <Item type="Integer" name="sku" title="SKU" isVisible="true" isPrimary="true" jPath="$.sku"/>
+ <Item type="Text" name="name" title="Name" isVisible="true" isSuggest="true" jPath="$.name"/>
+ <Item type="Text" name="type" title="Type" isVisible="true" jPath="$.type"/>
+ <Item type="DateTime" name="activeUpdateDate" title="Active Date" isVisible="true" jPath="$.activeUpdateDate"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" isVisible="true" jPath="$.regularPrice"/>
+ <Item type="Text" name="shortDescription" title="Short Description" isVisible="true" jPath="$.shortDescription"/>
+ <Item type="Text" name="longDescription" title="Long Description" isVisible="true" jPath="$.longDescription"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" isVisible="true" jPath="$.manufacturer"/>
+ <Item type="Text" name="department" title="Department" isVisible="true" jPath="$.department"/>
+ <Item type="Text" name="color" title="Color" isVisible="true" jPath="$.color"/>
+</DataDoc>

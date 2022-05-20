@@ -1,0 +1,16 @@
+<DataDoc name="Financial Credit Card Transactions">
+ <Item type="Integer" name="id" title="Id" dataFormat="###,###,###" uiFormat=",0" isPrimary="true" isVisible="false"/>
+ <Item type="Text" name="first_name" title="First Name" isVisible="true" />
+ <Item type="Text" name="last_name" title="Last Name" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="name_prefix" title="Name Prefix" isVisible="false"/>
+ <Item type="Text" name="address" title="Address" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="job" title="Job Title" isSuggest="true" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="iban" title="IBAN" isVisible="false"/>
+ <Item type="Text" name="swift_code" title="SWIFT Code" isVisible="false"/>
+ <Item type="Text" name="currency_code" title="Currency Code" isVisible="false"/>
+ <Item type="Text" name="credit_card_number" title="Credit Card Number" isSearch="true" isVisible="true"/>
+ <Item type="Integer" name="credit_card_security_code" title="Credit Card Security Code" dataFormat="&apos;###&apos;" uiFormat=",0" isVisible="false"/>
+ <Item type="Text" name="credit_card_provider" title="Credit Card Provider" isVisible="false"/>
+ <Item type="Float" name="balance" title="Credit Balance" dataFormat="###,###.####" uiFormat="&#x00A4;,0" isVisible="true"/>
+ <Item type="Date" name="creation_date" title="Transaction Date" dataFormat="yyyy-MM-dd" uiFormat="MMMM dd, yyyy" isVisible="true"/>
+</DataDoc>

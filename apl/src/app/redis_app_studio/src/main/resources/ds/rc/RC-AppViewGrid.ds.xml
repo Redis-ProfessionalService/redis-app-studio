@@ -1,0 +1,37 @@
+<DataSource ID="RC-AppViewGrid" serverConstructor="com.redis.app.redis_app_studio.rc.AppViewGridDS">
+ <fields>
+  <field name="employee_id" title="Employee Id" type="integer" detail="true" primaryKey="true" format="#"/>
+  <field name="full_name" title="Full Name" type="text" required="true"/>
+  <field name="gender" title="Gender" type="text" detail="true"/>
+  <field name="email_address" title="Email Address" type="text" detail="true"/>
+  <field name="father_name" title="Father Name" type="text" detail="true"/>
+  <field name="mother_name" title="Mother Name" type="text" detail="true"/>
+  <field name="position_title" title="Position Title" type="text"/>
+  <field name="office_location" title="Office Location" type="text"/>
+  <field name="industry_focus" title="Industry Focus" type="text"/>
+  <field name="job_description" title="Job Description" type="text" detail="true"/>
+  <field name="date_of_birth" title="Date of Birth" type="date" required="true" detail="true" format="MMMM dd, yyyy"/>
+  <field name="age_in_years" title="Age in Years" type="float" detail="true" format=",0.00"/>
+  <field name="date_of_joining" title="Date of Joining" type="date" detail="true" format="MMMM dd, yyyy"/>
+  <field name="age_in_company" title="Age in Company" type="float" detail="true" format=",0.00"/>
+  <field name="salary" title="Salary" type="integer" format="¤,0"/>
+  <field name="last_percent_hike" title="Last Percent Hike" type="text" detail="true"/>
+  <field name="social_security_number" title="Social Security Number" type="text" detail="true"/>
+  <field name="phone_number" title="Phone Number" type="text" detail="true"/>
+  <field name="place_name" title="Place Name" type="text" detail="true"/>
+  <field name="county" title="County" type="text" detail="true"/>
+  <field name="city" title="City" type="text"/>
+  <field name="state" title="State" type="text"/>
+  <field name="zip" title="Zip Code" type="integer" detail="true" format="#"/>
+  <field name="region" title="Region" type="text"/>
+  <field name="user_name" title="User Name" type="text" required="true" detail="true"/>
+  <field name="password" title="Password" type="text" required="true" detail="true"/>
+  <field name="ras_context" title="RAS Context" type="text" detail="true" hidden="true"/>
+ </fields>
+ <operationBindings>
+  <binding operationId="exportData" operationType="fetch" serverMethod="exportData">
+   <serverObject  lookupStyle="new" className="com.redis.app.redis_app_studio.rc.AppViewExportGridDS"/>
+  </binding>
+ </operationBindings>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

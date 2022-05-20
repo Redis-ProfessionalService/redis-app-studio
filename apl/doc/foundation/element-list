@@ -1,0 +1,7 @@
+com.redis.foundation.app
+com.redis.foundation.crypt
+com.redis.foundation.data
+com.redis.foundation.ds
+com.redis.foundation.io
+com.redis.foundation.mail
+com.redis.foundation.std

@@ -1,0 +1,6 @@
+<DataSource ID="DM-SuggestList" serverConstructor="com.redis.app.redis_app_studio.dm.SuggestListDS">
+ <fields>
+  <field name="_search" title="Suggestion" type="text" editorType="ComboBoxItem" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

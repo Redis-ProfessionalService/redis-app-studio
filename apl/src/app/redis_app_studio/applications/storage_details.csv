@@ -1,0 +1,8 @@
+document_name[Text](Document Name),document_title[Text](Document Title),document_type[Text](Document Text),document_description[Text](Document Description),document_date[Text](Date Uploaded),document_owner[Text](Document Owner),document_link[Text](Document Link),document_files[Text](Document Files)
+DataModeler.html,App Studio Data Modeler,Memory,Data modeling and analysis application,Jan-06-2022 10:15:00,System,http://localhost:8080/redis/DataModeler.html,Undefined
+RedisCore.html,App Studio Redis Core,Redis,HR employee management application,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RedisCore.html,Undefined
+RedisJson.html,App Studio RedisJSON,Redis,eCommerce product management application,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RedisJson.html,Undefined
+RediSearch-Hash.html,App Studio RediSearch (Hash),Redis,HR employee search application,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RediSearch-Hash.html,Undefined
+RediSearch-Json.html,App Studio RediSearch (JSON),Redis,Product data search application,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RediSearch-Json.html,Undefined
+RedisGraph.html,App Studio RedisGraph,Redis,IMDb movie and talent management application,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RedisGraph.html,Undefined
+RAS-Framework.html,App Studio Developer API,Redis,Redis App Studio developer documentation,Jan-06-2022 10:20:00,System,http://localhost:8080/redis/RAS-Framework.html,Undefined

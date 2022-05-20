@@ -1,0 +1,39 @@
+<DataDoc>
+ <Item type="Integer" name="employee_id" title="Employee Id" isPrimary="true" dataFormat="#" isVisible="true"/>
+ <Item type="Text" name="name_prefix" title="Name Prefix" isVisible="true"/>
+ <Item type="Text" name="first_name" title="First Name" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="middle_initial" title="Middle Name" isVisible="true"/>
+ <Item type="Text" name="last_name" title="Last Name" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="gender" title="Gender" isVisible="true"/>
+ <Item type="Text" name="email_address" title="Email Address" isVisible="true"/>
+ <Item type="Text" name="father_name" title="Father Name" isVisible="true" isSuggest="true" isSearch="true"/>
+ <Item type="Text" name="mother_name" title="Mother Name" isVisible="true"/>
+ <Item type="Text" name="mother_maiden_name" title="Mother Maiden Name" isVisible="true" isSearch="true"/>
+ <Item type="Date" name="date_of_birth" title="Date of Birth" isVisible="true" isRequired="true"/>
+ <Item type="Date" name="time_of_birth" title="Time of Birth" isVisible="true"/>
+ <Item type="Float" name="age_in_years" title="Age in Years" isVisible="true"/>
+ <Item type="Integer" name="weight_in_kgs" title="Weight in Kilograms" isVisible="true"/>
+ <Item type="DateTime" name="date_of_joining" title="Date of Joining" isVisible="true"/>
+ <Item type="Text" name="quarter_of_joining" title="Quarter of Joining" isVisible="true"/>
+ <Item type="Text" name="half_of_joining" title="Half of Joining" isVisible="true"/>
+ <Item type="Integer" name="year_of_joining" title="Year of Joining" dataFormat="#" isVisible="true"/>
+ <Item type="Integer" name="month_of_joining" title="Month of Joining" isVisible="true"/>
+ <Item type="Text" name="month_name" title="Month Name" isVisible="true"/>
+ <Item type="Text" name="short_month" title="Short Month" isVisible="true"/>
+ <Item type="Integer" name="day_of_joining" title="Day of Joining" isVisible="true"/>
+ <Item type="Text" name="dow_of_joining" title="Day of Week Joining" isVisible="true"/>
+ <Item type="Text" name="short_dow" title="Short Day of Week" isVisible="true"/>
+ <Item type="Float" name="age_in_company" title="Age in Company" isVisible="true"/>
+ <Item type="Integer" name="salary" title="Salary" isVisible="true"/>
+ <Item type="Text" name="last_percent_hike" title="Last Percent Hike" isVisible="true"/>
+ <Item type="Text" name="ssn" title="Social Security Number" isVisible="true"/>
+ <Item type="Text" name="phone_number" title="Phone Number" isVisible="true"/>
+ <Item type="Text" name="place_name" title="Place Name" isVisible="true"/>
+ <Item type="Text" name="county" title="County" isVisible="true"/>
+ <Item type="Text" name="city" title="City" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="state" title="State" isVisible="true" isRequired="true"/>
+ <Item type="Integer" name="zip" title="Zip Code" dataFormat="#" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="region" title="Region" isVisible="true"/>
+ <Item type="Text" name="user_name" title="User Name" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="password" title="Password" isVisible="true" isRequired="true" isSecret="true"/>
+</DataDoc>

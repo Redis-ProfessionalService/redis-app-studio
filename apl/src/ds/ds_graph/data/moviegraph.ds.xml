@@ -1,0 +1,19 @@
+<fields>
+ <field name="common_vertex_src_id" title="Vertex Src Id" type="text" hidden="true"/>
+ <field name="common_vertex_dst_id" title="Vertex Dst Id" type="text" hidden="true"/>
+ <field name="common_edge_direction" title="Direction" type="image" imageURLPrefix="direction/" imageURLSuffix=".png" />
+ <field name="common_id" title="Id" type="text" required="true" primaryKey="true"/>
+ <field name="common_type" title="Edge Type" type="text" editorType="SelectItem">
+  <valueMap>
+   <value>Composer</value>
+   <value>Singer</value>
+   <value>Producer</value>
+   <value>Actor</value>
+   <value>Director</value>
+  </valueMap>
+ </field>
+ <field name="common_vertex_name" title="Vertex Name" type="text"/>
+ <field name="contribution" title="Contribution" type="text"/>
+ <field name="employment_year" title="Employment Year" type="integer" format="#"/>
+ <field name="character_name" title="Character Name" type="text"/>
+</fields>

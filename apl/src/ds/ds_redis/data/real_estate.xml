@@ -1,0 +1,14 @@
+<DataDoc>
+ <Item type="Text" name="property_name" title="Property Name" isVisible="true" isPrimary="true"/>
+ <Item type="Text" name="street" title="Street" isVisible="true"/>
+ <Item type="Text" name="city" title="City" isVisible="true"/>
+ <Item type="Integer" name="zip" title="ZIP Code" isVisible="true"/>
+ <Item type="Text" name="state" title="State" isVisible="true"/>
+ <Item type="Integer" name="beds" title="Number of Beds" isVisible="true"/>
+ <Item type="Integer" name="baths" title="Number of Baths" isVisible="true"/>
+ <Item type="Integer" name="square_feet" title="Square Feet" isVisible="true"/>
+ <Item type="Text" name="property_type" title="Property Type" isVisible="true"/>
+ <Item type="Text" name="sale_date" title="Sale Date" isVisible="true"/>
+ <Item type="Double" name="sale_price" title="Sale Price" isVisible="true"/>
+ <Item type="Text" name="location" title="Location (Longitude,Latitude" isVisible="true"/>
+</DataDoc>

@@ -1,0 +1,12 @@
+<DataSource ID="RSH-DocumentGrid" serverConstructor="com.redis.app.redis_app_studio.rsh.DocumentGridDS">
+ <fields>
+  <field name="document_name" title="Name" type="text" primaryKey="true" canEdit="false" />
+  <field name="document_title" title="Title" type="text" />
+  <field name="document_type" title="Type" type="text" canEdit="false" />
+  <field name="document_description" title="Description" type="text" />
+  <field name="document_date" title="Date Uploaded" type="text" canEdit="false" />
+  <field name="document_size" title="Size" type="long" canEdit="false" format=",0" />
+  <field name="document_file" title="File Name" type="binary" maxFileSize="254857600" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

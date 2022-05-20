@@ -1,0 +1,19 @@
+<fields>
+ <field name="common_vertex_label" title="Label" type="text" editorType="SelectItem">
+  <valueMap>
+   <value>Movie</value>
+   <value>Principal</value>
+  </valueMap>
+ </field>
+ <field name="common_id" title="Id" type="text" required="true" primaryKey="true"/>
+ <field name="common_name" title="Name" type="text" required="true"/>
+ <field name="common_summary" title="Summary" type="text"/>
+ <field name="movie_release_year" title="Release Year" type="integer" format="#"/>
+ <field name="movie_genres" title="Genres" type="text"/>
+ <field name="movie_revenue" title="Revenue" type="float" format=",0.00"/>
+ <field name="principal_birth_year" title="Birth Year" type="integer" format="#"/>
+ <field name="principal_professions" title="Professions" type="text"/>
+ <field name="principal_is_male" title="Is Male" type="boolean"/>
+ <field name="principal_height" title="Height" type="integer" format=",0"/>
+ <field name="principal_eye_color" title="Eye Color" type="text"/>
+</fields>

@@ -1,0 +1,28 @@
+<DataDoc name="HR Employee Records">
+ <Item type="Integer" name="employee_id" title="Employee Id" isPrimary="true" dataFormat="#" uiFormat="#" isVisible="false"/>
+ <Item type="Text" name="full_name" title="Full Name" isVisible="true" isRequired="true" isSuggest="true" isSearch="true" />
+ <Item type="Text" name="gender" title="Gender" isVisible="false"/>
+ <Item type="Text" name="email_address" title="Email Address" isVisible="false"/>
+ <Item type="Text" name="father_name" title="Father Name" isVisible="false"/>
+ <Item type="Text" name="mother_name" title="Mother Name" isVisible="false"/>
+ <Item type="Text" name="position_title" title="Position Title" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="office_location" title="Office Location" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="industry_focus" title="Industry Focus" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="job_description" title="Job Description" isVisible="false"/>
+ <Item type="Date" name="date_of_birth" title="Date of Birth" isVisible="false" isRequired="true" dataFormat="MM/dd/yy" uiFormat="MMMM dd, yyyy" />
+ <Item type="Float" name="age_in_years" title="Age in Years" isVisible="false"/>
+ <Item type="Date" name="date_of_joining" title="Date of Joining" isVisible="false" dataFormat="MM/dd/yy" uiFormat="MMMM dd, yyyy" />
+ <Item type="Float" name="age_in_company" title="Age in Company" isVisible="false"/>
+ <Item type="Integer" name="salary" title="Salary" isVisible="true"  uiFormat="&#x00A4;,0" />
+ <Item type="Text" name="last_percent_hike" title="Last Percent Hike" isVisible="false"/>
+ <Item type="Text" name="social_security_number" title="Social Security Number" isVisible="false"  isSecret="true" />
+ <Item type="Text" name="phone_number" title="Phone Number" isVisible="false"/>
+ <Item type="Text" name="place_name" title="Place Name" isVisible="false"/>
+ <Item type="Text" name="county" title="County" isVisible="false"/>
+ <Item type="Text" name="city" title="City" isVisible="true" isRequired="false"/>
+ <Item type="Text" name="state" title="State" isVisible="true" isRequired="false"/>
+ <Item type="Integer" name="zip" title="Zip Code" dataFormat="#" uiFormat="#" isVisible="false" isRequired="false"/>
+ <Item type="Text" name="region" title="Region" isSearch="true" isVisible="true"/>
+ <Item type="Text" name="user_name" title="User Name" isVisible="false" isRequired="true"/>
+ <Item type="Text" name="password" title="Password" isVisible="false" isRequired="true" isSecret="true"/>
+</DataDoc>

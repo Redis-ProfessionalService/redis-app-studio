@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="en-US">
+	<head>
+		<title>Product Document Application</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/RW.css">
+		<link rel="shortuc icons" href="images/rw-favicon.ico" type=“image/x-icon”>
+		<link href="images/favicon.ico" rel="icon" type="image/x-icon">
+		<!-- SmartClient JavaScript Runtime Framework -->
+		<script>var isomorphicDir="isomorphic/";</script>
+		<script src="isomorphic/system/modules/ISC_Core.js"></script>
+		<script src="isomorphic/system/modules/ISC_Foundation.js"></script>
+		<script src="isomorphic/system/modules/ISC_Containers.js"></script>
+		<script src="isomorphic/system/modules/ISC_Grids.js"></script>
+		<script src="isomorphic/system/modules/ISC_Forms.js"></script>
+		<script src="isomorphic/system/modules/ISC_DataBinding.js"></script>
+		<script src="isomorphic/skins/Tahoe/load_skin.js"></script>
+		<!-- Pre-load Redis App Studio Data Sources -->
+		<script src="isomorphic/DataSourceLoader?dataSource=RJ-Database,RJ-AppViewGrid,RJ-DocCmdGrid,RJ-SchemaGrid"></script>
+		<!-- Redis App Studio JavaScript Source Files -->
+		<script SRC="js/shared/Application.js"></script>
+		<script SRC="js/rj/RedisJson.js"></script>
+	</head>
+	<body style="overflow:hidden">
+		<script>
+			let appContext = new AppBuilder("Redis App Studio", "Product Management Application").version("1.0")
+					.prefix("RJ").appType("CRUD+S").dsStructure("Hierarchy").dsStorage("Filesystem")
+					.dsAppViewName("RJ-AppViewGrid").dsAppViewTitle("eCommerce Product Data (1K)")
+					.gridHeight(90).redisStorageType("RJ").loggingEnabled(false).build();
+			// Assign our application context to the global window object
+			window._appContext_ = appContext;
+			// Create our application and show it
+			let redisJson = new RedisJson(appContext);
+			redisJson.init();
+			redisJson.show();
+		</script>
+	</body>
+</html>

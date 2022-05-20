@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Maven Targets:
+ http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+ mvn install        Install the package into the local repository.
+-->
+	<parent>
+		<groupId>com.redis.maven</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom/pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.redis</groupId>
+	<artifactId>tools</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>Redis App Studio Tools</name>
+	<description>This folder contains utility tools build modules.</description>
+	<modules>
+		<module>appcreate</module>
+	</modules>
+</project>

@@ -1,0 +1,29 @@
+<DataSource ID="DM-AppViewGrid" serverConstructor="com.redis.app.redis_app_studio.dm.AppViewGridDS">
+ <fields>
+  <field name="common_id" title="Id" type="text" detail="true" primaryKey="true"/>
+  <field name="common_vertex_label" title="Label" type="text" required="true" detail="false" editorType="SelectItem">
+   <valueMap>
+    <value>Principal</value>
+    <value>Movie</value>
+   </valueMap>
+  </field>
+  <field name="common_name" title="Name" type="text" detail="false"/>
+  <field name="movie_description" title="Description" type="text" detail="false"/>
+  <field name="movie_release_year" title="Release Year" type="integer" detail="false"/>
+  <field name="movie_genres" title="Genres" type="text" detail="false"/>
+  <field name="movie_revenue" title="Revenue" type="integer" detail="false" format="¤,0"/>
+  <field name="principal_bio_summary" title="Bio Summary" type="text" detail="false"/>
+  <field name="principal_birth_year" title="Birth Year" type="integer" detail="false"/>
+  <field name="principal_professions" title="Professions" type="text" detail="false"/>
+  <field name="principal_is_male" title="Is Male" type="boolean" detail="false"/>
+  <field name="principal_height" title="Height (inches)" type="integer" detail="false"/>
+  <field name="principal_eye_color" title="Eye Color" type="text" detail="false"/>
+  <field name="ras_context" title="RAS Context" type="text" detail="true" hidden="true"/>
+ </fields>
+ <operationBindings>
+  <binding operationId="exportData" operationType="fetch" serverMethod="exportData">
+   <serverObject  lookupStyle="new" className="com.redis.app.redis_app_studio.dm.AppViewExportGridDS"/>
+  </binding>
+ </operationBindings>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

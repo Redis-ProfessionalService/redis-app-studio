@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- Maven Targets:
+     http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+     mvn validate          Validate the project is correct and all necessary information is available.
+     mvn compile           Compile the source code of the project.
+     mvn test              Test the compiled source code using a suitable unit testing framework.
+     mvn package           Take the compiled code and package it into a JAR.
+     mvn install           Install the package into the local repository.
+     mvn clean             Removes compiled objects from the target folder.
+    -->
+  <parent>
+    <groupId>com.redis.maven</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>1.0</version>
+    <relativePath>../../pom/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.redis.app</groupId>
+  <artifactId>redis_app_studio</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  <name>Redis App Studio UI Framework</name>
+  <organization>
+    <name>Redis</name>
+    <url>http://www.redis.com</url>
+  </organization>
+  <developers>
+    <developer>
+      <name>Al Cole</name>
+      <email>al@redis.com</email>
+      <url>http://www.redis.com</url>
+      <organization>Redis</organization>
+      <organizationUrl>http://www.redis.com</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+  <url>http://localhost:8080/redis/DataModeler.html</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.redis.ds</groupId>
+      <artifactId>ds_content</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redis.ds</groupId>
+      <artifactId>ds_grid</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redis.ds</groupId>
+      <artifactId>ds_graph</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redis.ds</groupId>
+      <artifactId>ds_json</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redis.ds</groupId>
+      <artifactId>ds_redis</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redis</groupId>
+      <artifactId>foundation</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>isomorphic</groupId>
+      <artifactId>isomorphic-core-rpc</artifactId>
+      <version>v130p_2022-03-05</version>
+    </dependency>
+    <dependency>
+      <groupId>isomorphic</groupId>
+      <artifactId>isomorphic-assembly</artifactId>
+      <version>v130p_2022-03-05</version>
+    </dependency>
+    <dependency>
+      <groupId>isomorphic</groupId>
+      <artifactId>isomorphic-js-parser</artifactId>
+      <version>v130p_2022-03-05</version>
+    </dependency>
+    <dependency>
+      <groupId>isomorphic</groupId>
+      <artifactId>isomorphic-realtime-messaging</artifactId>
+      <version>v130p_2022-03-05</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+    <!-- You are locked into Tomcat 9.x due to interface breaking changes made in
+         Tomcat 10.x and the fact that SmartClient uses the old package names. -->
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>9.0.33</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.4</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

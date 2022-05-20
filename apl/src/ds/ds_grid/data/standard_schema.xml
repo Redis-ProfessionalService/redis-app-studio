@@ -1,0 +1,14 @@
+<DataDoc>
+ <Item type="Text" name="item_name" title="Item Name" isVisible="true"/>
+ <Item type="Text" name="item_type" title="Item Type" isVisible="true"/>
+ <Item type="Text" name="item_title" title="Item Title" isVisible="true"/>
+ <Item type="Boolean" name="isPrimary" title="Is Primary" isVisible="true"/>
+ <Item type="Boolean" name="isRequired" title="Is Required" isVisible="true"/>
+ <Item type="Boolean" name="isVisible" title="Is Visible" isVisible="true"/>
+ <Item type="Boolean" name="isSearch" title="Is Searchable" isVisible="true"/>
+ <Item type="Boolean" name="isSuggest" title="Is Suggest" isVisible="true"/>
+ <Item type="Boolean" name="isSecret" title="Is Secret" isVisible="true"/>
+ <Item type="Boolean" name="isLatitude" title="Is Latitude" isVisible="true"/>
+ <Item type="Boolean" name="isLongitude" title="Is Longitude" isVisible="true"/>
+ <Item type="Boolean" name="isHidden" title="Is Hidden" isVisible="true"/>
+</DataDoc>

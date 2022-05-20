@@ -1,0 +1,45 @@
+SET MarkerStart 'Add/Get DataDoc' EX 1
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test" name1 value1 "name two" value2 name3 value3 name4 value4 name5 'value five' name6 value6 name7 value7 name8 value8 name9 value9 name10 valueA|valueB|valueC|valueD name11 11
+INFO
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test"
+MEMORY USAGE "ASRC:RC:HA:DD:MN:Data Doc Test"
+SET MarkerFinish '[7473 ms - 367 bytes] Add/Get DataDoc' EX 1
+SET MarkerStart 'Update DataDoc' EX 1
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test"
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test" name6 value06
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test"
+MEMORY USAGE "ASRC:RC:HA:DD:MN:Data Doc Test"
+SET MarkerFinish '[10 ms - 368 bytes] Update DataDoc' EX 1
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test"
+DEL "ASRC:RC:HA:DD:MN:Data Doc Test"
+SET MarkerStart 'Another & Update DataDoc' EX 1
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test 1" name1 value1 "name two" value2 name3 value3 name4 value4 name5 'value five'
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test 1" name20 20
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test 1" name1 1 "name two" 2 name3 3
+HDEL "ASRC:RC:HA:DD:MN:Data Doc Test 1" name4 name5
+MEMORY USAGE "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+SET MarkerFinish '[1357 ms - 208 bytes] Another & Update DataDoc' EX 1
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+DEL "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+SET MarkerStart 'Hierarchical DataDoc' EX 1
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test B" name1 1 "name two" 2 name3 3 name20 20
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test A" name1 1 "name two" 2 name3 3 name20 20
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test A" "Child Of A" 'ASRC:RC:HA:DD:MN:Data Doc Test B'
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test 1" name1 value1 "name two" value2 name3 value3 name4 value4 name5 'value five'
+HSET "ASRC:RC:HA:DD:MN:Data Doc Test 1" "Child of 1" 'ASRC:RC:HA:DD:MN:Data Doc Test A'
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test A"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test B"
+MEMORY USAGE "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+SET MarkerFinish '[5752 ms - 261 bytes] Hierarchical DataDoc' EX 1
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test A"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test B"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test A"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test B"
+HGETALL "ASRC:RC:HA:DD:MN:Data Doc Test B"
+DEL "ASRC:RC:HA:DD:MN:Data Doc Test B"
+DEL "ASRC:RC:HA:DD:MN:Data Doc Test A"
+DEL "ASRC:RC:HA:DD:MN:Data Doc Test 1"
+HGETALL "DOES NOT EXIST"
+DEL "DOES NOT EXIST"

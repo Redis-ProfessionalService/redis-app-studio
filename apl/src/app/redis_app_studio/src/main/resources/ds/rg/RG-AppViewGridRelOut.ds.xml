@@ -1,0 +1,23 @@
+<DataSource ID="RG-AppViewGridRelOut" serverConstructor="com.redis.app.redis_app_studio.rg.AppViewGridRelOutDS">
+ <fields>
+  <field name="common_vertex_src_id" title="Vertex Src Id" type="text" hidden="true"/>
+  <field name="common_vertex_dst_id" title="Vertex Dst Id" type="text" hidden="true"/>
+  <field name="common_edge_direction" title="Direction" type="image" imageURLPrefix="direction/" imageURLSuffix=".png" />
+  <field name="common_id" title="Id" type="text" required="true" detail="true" primaryKey="true"/>
+  <field name="common_type" title="Type" type="text" detail="false" editorType="SelectItem">
+   <valueMap>
+    <value>Actor</value>
+    <value>Director</value>
+    <value>Composer</value>
+    <value>Producer</value>
+    <value>Singer</value>
+   </valueMap>
+  </field>
+  <field name="common_vertex_name" title="Name" type="text"/>
+  <field name="contribution" title="Contribution" type="text"/>
+  <field name="employment_year" title="Filming Year" type="integer" format="#"/>
+  <field name="character_name" title="Character Name" type="text"/>
+  <field name="ras_context" title="RAS Context" type="text" hidden="true" detail="true"/>
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

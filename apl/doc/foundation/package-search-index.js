@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.redis.foundation.app"},{"l":"com.redis.foundation.crypt"},{"l":"com.redis.foundation.data"},{"l":"com.redis.foundation.ds"},{"l":"com.redis.foundation.io"},{"l":"com.redis.foundation.mail"},{"l":"com.redis.foundation.std"}];updateSearchResults();

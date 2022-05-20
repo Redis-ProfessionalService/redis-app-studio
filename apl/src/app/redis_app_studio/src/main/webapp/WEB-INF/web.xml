@@ -1,0 +1,207 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	      version="3.0">
+
+    <display-name>Redis App Studio</display-name>
+    <!-- Note: The servlets/filters referenced here are documented in the SDK javadoc -->
+
+    <!-- Caching: anything with an isc_version query param is cacheable for 1 year -->
+    <filter>
+        <filter-name>CacheFilterMaxExpires</filter-name>
+        <filter-class>com.isomorphic.servlet.CacheFilter</filter-class>
+        <init-param>
+          <param-name>rules</param-name>
+          <param-value>
+              match:isc_version=
+          </param-value>
+        </init-param>
+        <init-param>
+          <param-name>expires</param-name>
+          <param-value>*:31536000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CacheFilterMaxExpires</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- The IDACall servlet handles all Built-in DataSource operations -->
+    <servlet>
+        <servlet-name>IDACall</servlet-name>
+        <servlet-class>com.isomorphic.servlet.IDACall</servlet-class>
+    </servlet>
+
+    <!-- The RESTHandler servlet handles SmartClient Server DataSource operations issued by 
+         REST clients - it's like IDACall, but for the REST protocol.  Typically,  the clients
+         of this servlet would not be ordinary SmartClient/SmartGWT applications (though they 
+         could be), but other client technologies that need to access SmartClient DataSource 
+         operations as reusable services -->
+    <servlet>
+        <servlet-name>RESTHandler</servlet-name>
+        <servlet-class>com.isomorphic.servlet.RESTHandler</servlet-class>
+    </servlet>
+
+    <!-- The DataSourceLoader servlet returns Javascript representations of the dataSources whose
+         ID's are passed to it - it is an alternative to using the <loadDS> JSP tag -->
+    <servlet>
+        <servlet-name>DataSourceLoader</servlet-name>
+        <servlet-class>com.isomorphic.servlet.DataSourceLoader</servlet-class>
+    </servlet>
+
+    <!-- The projectLoader servlet loads project definitions in javascript notation -->
+    <servlet>
+        <servlet-name>projectLoader</servlet-name>
+        <servlet-class>com.isomorphic.servlet.ProjectLoaderServlet</servlet-class>
+    </servlet>
+
+    <!-- The screenLoader servlet loads screen definitions in javascript notation -->
+    <servlet>
+        <servlet-name>screenLoader</servlet-name>
+        <servlet-class>com.isomorphic.servlet.ScreenLoaderServlet</servlet-class>
+    </servlet>
+
+    <!-- The FileDownload servlet downloads static files, like a webserver -->
+    <servlet>
+        <servlet-name>FileDownload</servlet-name>
+        <servlet-class>com.isomorphic.servlet.FileDownload</servlet-class>
+    </servlet>
+
+
+	<!-- Init: initializes SmartClient framework.  Note that we invoke the Init logic from 
+	     both a Listener and a load-on-startup Servlet in this file - see the client-side 
+	     documentation topic "serverInit" for a discussion of this.  -->
+	<listener>
+		<listener-class>com.isomorphic.base.InitListener</listener-class>
+	</listener>
+    <servlet>
+        <servlet-name>Init</servlet-name>
+        <servlet-class>com.isomorphic.base.Init</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+	  
+    <servlet>
+        <servlet-name>HttpProxy</servlet-name>
+        <servlet-class>com.isomorphic.servlet.HttpProxyServlet</servlet-class>
+    </servlet>
+
+    <!-- The PreCache servlet initializes when the servlet engine starts up and pre-loads 
+         data need for all client requests.  This is optional, and improves performance
+         of the first few page requests.  PreCache cannot be invoked by a browser, because
+         there is no "servlet-mapping" defined for it. -->
+    <servlet>
+        <servlet-name>PreCache</servlet-name>
+        <servlet-class>com.isomorphic.servlet.PreCache</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <!-- Redis Workbench Graph Visualization servlet -->
+    <servlet>
+        <servlet-name>GraphVisualization</servlet-name>
+        <servlet-class>com.redis.app.redis_app_studio.servlet.GraphVisualizationServlet</servlet-class>
+    </servlet>
+    <!-- GraphVisualization uses this URL by default for graph visualization operations -->
+    <servlet-mapping>
+        <servlet-name>GraphVisualization</servlet-name>
+        <url-pattern>/isomorphic/visualize/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- RPCManager uses this URL by default for Built-in DataSource operations -->
+    <servlet-mapping>
+        <servlet-name>IDACall</servlet-name>
+        <url-pattern>/isomorphic/IDACall/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Built-in DataSource operations backcompat -->
+    <servlet-mapping>
+        <servlet-name>IDACall</servlet-name>
+        <url-pattern>/isomorphic/IDACall.aspx/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- DataSourceLoader requests -->
+    <servlet-mapping>
+        <servlet-name>DataSourceLoader</servlet-name>
+        <url-pattern>/isomorphic/DataSourceLoader</url-pattern>
+    </servlet-mapping>
+
+    <!-- The projectLoader servlet loads project definitions in javascript notation -->
+    <servlet-mapping>
+        <servlet-name>projectLoader</servlet-name>
+        <url-pattern>/isomorphic/projectLoader</url-pattern>
+    </servlet-mapping>
+
+    <!-- The screenLoader servlet loads screen definitions in javascript notation -->
+    <servlet-mapping>
+        <servlet-name>screenLoader</servlet-name>
+        <url-pattern>/isomorphic/screenLoader</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HttpProxy</servlet-name>
+        <url-pattern>/isomorphic/HttpProxy/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Use FileDownload servlet to download all static content that's part of the skin, such as
+         image files, so we can set Expires headers and other cache control directives.  In a
+         production deployment, you'd want to use a webserver such as Apache to do this.  
+    -->
+    <servlet-mapping>
+      <servlet-name>FileDownload</servlet-name>
+      <url-pattern>/isomorphic/skins/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+      <servlet-name>FileDownload</servlet-name>
+      <url-pattern>/isomorphic/locales/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileDownload</servlet-name>
+        <url-pattern>/isomorphic/system/reference/skin/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileDownload</servlet-name>
+        <url-pattern>/isomorphic/system/reference/exampleImages/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- security: disallow direct browser access to datasource files that may have embedded
+         server code.  This code is stripped out when loaded via the DataSourceLoader servlet,
+         but not if directly fetched via http. -->
+    <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/shared/ds/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint/>
+    </security-constraint>    
+    
+    <!-- General config -->
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+    <jsp-config>
+        <!-- Isomorphic JSP tags -->
+        <taglib>
+            <taglib-uri>isomorphic</taglib-uri> 
+            <taglib-location>/WEB-INF/iscTaglib.xml</taglib-location> 
+        </taglib>        
+        <!-- Serve *.isc files with iscHeader/iscFooter -->
+        <jsp-property-group>
+            <url-pattern>*.isc</url-pattern>
+            <include-prelude>/shared/jsp/iscHeader.jsp</include-prelude>
+            <include-coda>/shared/jsp/iscFooter.jsp</include-coda>
+        </jsp-property-group>
+
+        <!-- Process *.rpc files as RPC requests - puts you in an iterator over current RPC requests -->
+        <jsp-property-group>
+            <url-pattern>*.rpc</url-pattern>
+            <include-prelude>/shared/jsp/rpcHeader.jsp</include-prelude>
+            <include-coda>/shared/jsp/rpcFooter.jsp</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+
+    <mime-mapping>
+        <extension>manifest</extension>
+        <mime-type>text/cache-manifest</mime-type>
+    </mime-mapping>
+
+</web-app>

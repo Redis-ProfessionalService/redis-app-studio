@@ -1,0 +1,19 @@
+<DataSource ID="RG-RelationshipFilter" serverConstructor="com.redis.app.redis_app_studio.rg.AppViewGridDS">
+ <fields>
+  <field name="common_id" title="Id" type="text" required="true" detail="true" primaryKey="true"/>
+  <field name="common_name" title="Name" type="text" required="true" width="175"/>
+  <field name="common_type" title="Type" type="text" detail="false" editorType="SelectItem">
+   <valueMap>
+    <value>Actor</value>
+    <value>Composer</value>
+    <value>Director</value>
+    <value>Producer</value>
+    <value>Singer</value>
+   </valueMap>
+  </field>
+  <field name="contribution" title="Contribution" type="text"/>
+  <field name="employment_year" title="Filming Year" type="integer" format="#"/>
+  <field name="character_name" title="Character Name" type="text"/>
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

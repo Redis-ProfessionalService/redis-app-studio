@@ -1,0 +1,12 @@
+<DataDoc>
+ <Item type="Integer" name="id" title="Id" isPrimary="true" dataFormat="#" isVisible="true"/>
+ <Item type="Text" name="company_name" title="Company Name" isVisible="true"/>
+ <Item type="Text" name="position" title="Title" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="url" title="Job URL" isVisible="true"/>
+ <Item type="Text" name="location" title="Location" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="headquarters" title="Headquarters" isVisible="true"/>
+ <Item type="Text" name="employees" title="Employees" isVisible="true"/>
+ <Item type="Text" name="founded" title="Founded" isVisible="true" isSuggest="true" isSearch="true"/>
+ <Item type="Text" name="industry" title="Industry" isVisible="true"/>
+ <Item type="Text" name="job_description" title="Job Description" isVisible="true" isSearch="true"/>
+</DataDoc>

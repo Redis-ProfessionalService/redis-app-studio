@@ -1,0 +1,118 @@
+<DataDoc>
+ <Item type="Integer" name="sku" title="SKU" dataFormat="###,###,###" uiFormat=",0" isPrimary="true" isVisible="true"/>
+ <Item type="Long" name="productId" title="Product Id" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="name" title="Name" isVisible="true"/>
+ <Item type="Text" name="source" title="Source" isVisible="true"/>
+ <Item type="Text" name="type" title="Type" isVisible="true"/>
+ <Item type="Text" name="startDate" title="Start Date" isVisible="true"/>
+ <Item type="Boolean" name="new" title="New" isVisible="true"/>
+ <Item type="Boolean" name="active" title="Active" isVisible="true"/>
+ <Item type="Boolean" name="lowPriceGuarantee" title="Low Price Guarantee" isVisible="true"/>
+ <Item type="Text" name="activeUpdateDate" title="Active Update Date" isVisible="true"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" dataFormat="###,###.####" uiFormat=",0.00" isVisible="true"/>
+ <Item type="Double" name="salePrice" title="Sale Price" dataFormat="###,###.####" uiFormat=",0.00" isVisible="true"/>
+ <Item type="Boolean" name="clearance" title="Clearance" isVisible="true"/>
+ <Item type="Boolean" name="onSale" title="On Sale" isVisible="true"/>
+ <Item type="Text" name="priceWithPlan" title="Price With Plan" isVisible="true"/>
+ <Item type="Text" name="contracts" title="Contracts" isVisible="true"/>
+ <Item type="Text" name="priceUpdateDate" title="Price Update Date" isVisible="true"/>
+ <Item type="Boolean" name="digital" title="Digital" isVisible="true"/>
+ <Item type="Boolean" name="preowned" title="Preowned" isVisible="true"/>
+ <Item type="Text" name="carriers" title="Carriers" isVisible="true"/>
+ <Item type="Text" name="planFeatures" title="Plan Features" isVisible="true"/>
+ <Item type="Text" name="devices" title="Devices" isVisible="true"/>
+ <Item type="Text" name="carrierPlans" title="Carrier Plans" isVisible="true"/>
+ <Item type="Text" name="earlyTerminationFees" title="Early Termination Fees" isVisible="true"/>
+ <Item type="Text" name="monthlyRecurringCharge" title="Monthly Recurring Charge" isVisible="true"/>
+ <Item type="Text" name="monthlyRecurringChargeGrandTotal" title="Monthly Recurring Charge Grand Total" isVisible="true"/>
+ <Item type="Text" name="activationCharge" title="Activation Charge" isVisible="true"/>
+ <Item type="Text" name="minutePrice" title="Minute Price" isVisible="true"/>
+ <Item type="Text" name="frequentlyPurchasedWith" title="Frequently Purchased With" isVisible="true"/>
+ <Item type="Text" name="accessories" title="Accessories" isVisible="true"/>
+ <Item type="Text" name="requiredParts" title="Required Parts" isVisible="true"/>
+ <Item type="Text" name="techSupportPlans" title="Tech Support Plans" isVisible="true"/>
+ <Item type="Text" name="crossSell" title="Cross Sell" isVisible="true"/>
+ <Item type="Integer" name="salesRankMediumTerm" title="Sales Rank Medium Term" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Integer" name="salesRankLongTerm" title="Sales Rank Long Term" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Integer" name="bestSellingRank" title="Best Selling Rank" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="url" title="Url" isVisible="true"/>
+ <Item type="Text" name="mobileUrl" title="Mobile Url" isVisible="true"/>
+ <Item type="Text" name="addToCartUrl" title="Add To Cart Url" isVisible="true"/>
+ <Item type="Text" name="linkShareAffiliateUrl" title="Link Share Affiliate Url" isVisible="true"/>
+ <Item type="Text" name="linkShareAffiliateAddToCartUrl" title="Link Share Affiliate Add To Cart Url" isVisible="true"/>
+ <Item type="Text" name="upc" title="Upc" isVisible="true"/>
+ <Item type="Text" name="productTemplate" title="Product Template" isVisible="true"/>
+ <Item type="Text" name="alternateCategories" title="Alternate Categories" isVisible="true"/>
+ <Item type="Text" name="lists" title="Lists" isVisible="true"/>
+ <Item type="Integer" name="customerReviewCount" title="Customer Review Count" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Double" name="customerReviewAverage" title="Customer Review Average" dataFormat="###,###.####" uiFormat=",0.00" isVisible="true"/>
+ <Item type="Boolean" name="customerTopRated" title="Customer Top Rated" isVisible="true"/>
+ <Item type="Boolean" name="freeShipping" title="Free Shipping" isVisible="true"/>
+ <Item type="Boolean" name="freeShippingEligible" title="Free Shipping Eligible" isVisible="true"/>
+ <Item type="Boolean" name="inStoreAvailability" title="In Store Availability" isVisible="true"/>
+ <Item type="Text" name="inStoreAvailabilityText" title="In Store Availability Text" isVisible="true"/>
+ <Item type="Text" name="inStoreAvailabilityTextHtml" title="In Store Availability Text Html" isVisible="true"/>
+ <Item type="Text" name="inStoreAvailabilityUpdateDate" title="In Store Availability Update Date" isVisible="true"/>
+ <Item type="Text" name="itemUpdateDate" title="Item Update Date" isVisible="true"/>
+ <Item type="Boolean" name="onlineAvailability" title="Online Availability" isVisible="true"/>
+ <Item type="Text" name="onlineAvailabilityText" title="Online Availability Text" isVisible="true"/>
+ <Item type="Text" name="onlineAvailabilityTextHtml" title="Online Availability Text Html" isVisible="true"/>
+ <Item type="Text" name="onlineAvailabilityUpdateDate" title="Online Availability Update Date" isVisible="true"/>
+ <Item type="Double" name="shippingCost" title="Shipping Cost" dataFormat="###,###.####" uiFormat=",0" isVisible="true"/>
+ <Item type="Boolean" name="specialOrder" title="Special Order" isVisible="true"/>
+ <Item type="Text" name="shortDescription" title="Short Description" isVisible="true"/>
+ <Item type="Text" name="shortDescriptionHtml" title="Short Description Html" isVisible="true"/>
+ <Item type="Text" name="class" title="Class" isVisible="true"/>
+ <Item type="Integer" name="classId" title="Class Id" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="subclass" title="Subclass" isVisible="true"/>
+ <Item type="Integer" name="subclassId" title="Subclass Id" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="department" title="Department" isVisible="true"/>
+ <Item type="Integer" name="departmentId" title="Department Id" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="bestBuyItemId" title="Best Buy Item Id" isVisible="true"/>
+ <Item type="Text" name="protectionPlanTerm" title="Protection Plan Term" isVisible="true"/>
+ <Item type="Text" name="protectionPlanLowPrice" title="Protection Plan Low Price" isVisible="true"/>
+ <Item type="Text" name="protectionPlanHighPrice" title="Protection Plan High Price" isVisible="true"/>
+ <Item type="Text" name="buybackPlans" title="Buyback Plans" isVisible="true"/>
+ <Item type="Text" name="protectionPlans" title="Protection Plans" isVisible="true"/>
+ <Item type="Text" name="protectionPlanDetails" title="Protection Plan Details" isVisible="true"/>
+ <Item type="Text" name="productFamilies" title="Product Families" isVisible="true"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" isVisible="true"/>
+ <Item type="Text" name="modelNumber" title="Model Number" isVisible="true"/>
+ <Item type="Text" name="image" title="Image" isVisible="true"/>
+ <Item type="Text" name="mediumImage" title="Medium Image" isVisible="true"/>
+ <Item type="Text" name="thumbnailImage" title="Thumbnail Image" isVisible="true"/>
+ <Item type="Text" name="largeImage" title="Large Image" isVisible="true"/>
+ <Item type="Text" name="angleImage" title="Angle Image" isVisible="true"/>
+ <Item type="Text" name="albumTitle" title="Album Title" isVisible="true"/>
+ <Item type="Text" name="condition" title="Condition" isVisible="true"/>
+ <Item type="Boolean" name="inStorePickup" title="In Store Pickup" isVisible="true"/>
+ <Item type="Boolean" name="friendsAndFamilyPickup" title="Friends And Family Pickup" isVisible="true"/>
+ <Item type="Boolean" name="homeDelivery" title="Home Delivery" isVisible="true"/>
+ <Item type="Integer" name="quantityLimit" title="Quantity Limit" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="fulfilledBy" title="Fulfilled By" isVisible="true"/>
+ <Item type="Text" name="members" title="Members" isVisible="true"/>
+ <Item type="Text" name="bundledIn" title="Bundled In" isVisible="true"/>
+ <Item type="Text" name="color" title="Color" isVisible="true"/>
+ <Item type="Text" name="depth" title="Depth" isVisible="true"/>
+ <Item type="Double" name="dollarSavings" title="Dollar Savings" dataFormat="###,###.####" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="percentSavings" title="Percent Savings" isVisible="true"/>
+ <Item type="Text" name="tradeInValue" title="Trade In Value" isVisible="true"/>
+ <Item type="Text" name="height" title="Height" isVisible="true"/>
+ <Item type="Text" name="orderable" title="Orderable" isVisible="true"/>
+ <Item type="Text" name="weight" title="Weight" isVisible="true"/>
+ <Item type="Double" name="shippingWeight" title="Shipping Weight" dataFormat="###,###.####" uiFormat=",0.00" isVisible="true"/>
+ <Item type="Text" name="width" title="Width" isVisible="true"/>
+ <Item type="Text" name="warrantyLabor" title="Warranty Labor" isVisible="true"/>
+ <Item type="Text" name="warrantyParts" title="Warranty Parts" isVisible="true"/>
+ <Item type="Text" name="longDescription" title="Long Description" isVisible="true"/>
+ <Item type="Text" name="longDescriptionHtml" title="Long Description Html" isVisible="true"/>
+ <Item type="Text" name="cast" title="Cast" isVisible="true"/>
+ <Item type="Text" name="crew" title="Crew" isVisible="true"/>
+ <Item type="Text" name="offers" title="Offers" isVisible="true"/>
+ <Item type="Boolean" name="marketplace" title="Marketplace" isVisible="true"/>
+ <Item type="Text" name="discs" title="Discs" isVisible="true"/>
+ <Item type="Integer" name="commerceSku" title="Commerce Sku" dataFormat="###,###,###" uiFormat=",0" isVisible="true"/>
+ <Item type="Text" name="proposition65WarningType" title="Proposition65Warning Type" isVisible="true"/>
+ <Item type="Text" name="displayType" title="Display Type" isVisible="true"/>
+ <Item type="Text" name="powerSource" title="Power Source" isVisible="true"/>
+</DataDoc>

@@ -1,0 +1,118 @@
+<fields>
+ <field name="sku" title="SKU" type="integer" primaryKey="true" format=",0"/>
+ <field name="productId" title="Product Id" type="integer" format=",0"/>
+ <field name="name" title="Name" type="text"/>
+ <field name="source" title="Source" type="text"/>
+ <field name="type" title="Type" type="text"/>
+ <field name="startDate" title="Start Date" type="text"/>
+ <field name="new" title="New" type="boolean"/>
+ <field name="active" title="Active" type="boolean"/>
+ <field name="lowPriceGuarantee" title="Low Price Guarantee" type="boolean"/>
+ <field name="activeUpdateDate" title="Active Update Date" type="text"/>
+ <field name="regularPrice" title="Regular Price" type="float" format=",0.00"/>
+ <field name="salePrice" title="Sale Price" type="float" format=",0.00"/>
+ <field name="clearance" title="Clearance" type="boolean"/>
+ <field name="onSale" title="On Sale" type="boolean"/>
+ <field name="priceWithPlan" title="Price With Plan" type="text"/>
+ <field name="contracts" title="Contracts" type="text"/>
+ <field name="priceUpdateDate" title="Price Update Date" type="text"/>
+ <field name="digital" title="Digital" type="boolean"/>
+ <field name="preowned" title="Preowned" type="boolean"/>
+ <field name="carriers" title="Carriers" type="text"/>
+ <field name="planFeatures" title="Plan Features" type="text"/>
+ <field name="devices" title="Devices" type="text"/>
+ <field name="carrierPlans" title="Carrier Plans" type="text"/>
+ <field name="earlyTerminationFees" title="Early Termination Fees" type="text"/>
+ <field name="monthlyRecurringCharge" title="Monthly Recurring Charge" type="text"/>
+ <field name="monthlyRecurringChargeGrandTotal" title="Monthly Recurring Charge Grand Total" type="text"/>
+ <field name="activationCharge" title="Activation Charge" type="text"/>
+ <field name="minutePrice" title="Minute Price" type="text"/>
+ <field name="frequentlyPurchasedWith" title="Frequently Purchased With" type="text"/>
+ <field name="accessories" title="Accessories" type="text"/>
+ <field name="requiredParts" title="Required Parts" type="text"/>
+ <field name="techSupportPlans" title="Tech Support Plans" type="text"/>
+ <field name="crossSell" title="Cross Sell" type="text"/>
+ <field name="salesRankMediumTerm" title="Sales Rank Medium Term" type="integer" format=",0"/>
+ <field name="salesRankLongTerm" title="Sales Rank Long Term" type="integer" format=",0"/>
+ <field name="bestSellingRank" title="Best Selling Rank" type="integer" format=",0"/>
+ <field name="url" title="Url" type="text"/>
+ <field name="mobileUrl" title="Mobile Url" type="text"/>
+ <field name="addToCartUrl" title="Add To Cart Url" type="text"/>
+ <field name="linkShareAffiliateUrl" title="Link Share Affiliate Url" type="text"/>
+ <field name="linkShareAffiliateAddToCartUrl" title="Link Share Affiliate Add To Cart Url" type="text"/>
+ <field name="upc" title="Upc" type="text"/>
+ <field name="productTemplate" title="Product Template" type="text"/>
+ <field name="alternateCategories" title="Alternate Categories" type="text"/>
+ <field name="lists" title="Lists" type="text"/>
+ <field name="customerReviewCount" title="Customer Review Count" type="integer" format=",0"/>
+ <field name="customerReviewAverage" title="Customer Review Average" type="float" format=",0.00"/>
+ <field name="customerTopRated" title="Customer Top Rated" type="boolean"/>
+ <field name="freeShipping" title="Free Shipping" type="boolean"/>
+ <field name="freeShippingEligible" title="Free Shipping Eligible" type="boolean"/>
+ <field name="inStoreAvailability" title="In Store Availability" type="boolean"/>
+ <field name="inStoreAvailabilityText" title="In Store Availability Text" type="text"/>
+ <field name="inStoreAvailabilityTextHtml" title="In Store Availability Text Html" type="text"/>
+ <field name="inStoreAvailabilityUpdateDate" title="In Store Availability Update Date" type="text"/>
+ <field name="itemUpdateDate" title="Item Update Date" type="text"/>
+ <field name="onlineAvailability" title="Online Availability" type="boolean"/>
+ <field name="onlineAvailabilityText" title="Online Availability Text" type="text"/>
+ <field name="onlineAvailabilityTextHtml" title="Online Availability Text Html" type="text"/>
+ <field name="onlineAvailabilityUpdateDate" title="Online Availability Update Date" type="text"/>
+ <field name="shippingCost" title="Shipping Cost" type="float" format=",0"/>
+ <field name="specialOrder" title="Special Order" type="boolean"/>
+ <field name="shortDescription" title="Short Description" type="text"/>
+ <field name="shortDescriptionHtml" title="Short Description Html" type="text"/>
+ <field name="class" title="Class" type="text"/>
+ <field name="classId" title="Class Id" type="integer" format=",0"/>
+ <field name="subclass" title="Subclass" type="text"/>
+ <field name="subclassId" title="Subclass Id" type="integer" format=",0"/>
+ <field name="department" title="Department" type="text"/>
+ <field name="departmentId" title="Department Id" type="integer" format=",0"/>
+ <field name="bestBuyItemId" title="Best Buy Item Id" type="text"/>
+ <field name="protectionPlanTerm" title="Protection Plan Term" type="text"/>
+ <field name="protectionPlanLowPrice" title="Protection Plan Low Price" type="text"/>
+ <field name="protectionPlanHighPrice" title="Protection Plan High Price" type="text"/>
+ <field name="buybackPlans" title="Buyback Plans" type="text"/>
+ <field name="protectionPlans" title="Protection Plans" type="text"/>
+ <field name="protectionPlanDetails" title="Protection Plan Details" type="text"/>
+ <field name="productFamilies" title="Product Families" type="text"/>
+ <field name="manufacturer" title="Manufacturer" type="text"/>
+ <field name="modelNumber" title="Model Number" type="text"/>
+ <field name="image" title="Image" type="text"/>
+ <field name="mediumImage" title="Medium Image" type="text"/>
+ <field name="thumbnailImage" title="Thumbnail Image" type="text"/>
+ <field name="largeImage" title="Large Image" type="text"/>
+ <field name="angleImage" title="Angle Image" type="text"/>
+ <field name="albumTitle" title="Album Title" type="text"/>
+ <field name="condition" title="Condition" type="text"/>
+ <field name="inStorePickup" title="In Store Pickup" type="boolean"/>
+ <field name="friendsAndFamilyPickup" title="Friends And Family Pickup" type="boolean"/>
+ <field name="homeDelivery" title="Home Delivery" type="boolean"/>
+ <field name="quantityLimit" title="Quantity Limit" type="integer" format=",0"/>
+ <field name="fulfilledBy" title="Fulfilled By" type="text"/>
+ <field name="members" title="Members" type="text"/>
+ <field name="bundledIn" title="Bundled In" type="text"/>
+ <field name="color" title="Color" type="text"/>
+ <field name="depth" title="Depth" type="text"/>
+ <field name="dollarSavings" title="Dollar Savings" type="float" format=",0"/>
+ <field name="percentSavings" title="Percent Savings" type="text"/>
+ <field name="tradeInValue" title="Trade In Value" type="text"/>
+ <field name="height" title="Height" type="text"/>
+ <field name="orderable" title="Orderable" type="text"/>
+ <field name="weight" title="Weight" type="text"/>
+ <field name="shippingWeight" title="Shipping Weight" type="float" format=",0.00"/>
+ <field name="width" title="Width" type="text"/>
+ <field name="warrantyLabor" title="Warranty Labor" type="text"/>
+ <field name="warrantyParts" title="Warranty Parts" type="text"/>
+ <field name="longDescription" title="Long Description" type="text"/>
+ <field name="longDescriptionHtml" title="Long Description Html" type="text"/>
+ <field name="cast" title="Cast" type="text"/>
+ <field name="crew" title="Crew" type="text"/>
+ <field name="offers" title="Offers" type="text"/>
+ <field name="marketplace" title="Marketplace" type="boolean"/>
+ <field name="discs" title="Discs" type="text"/>
+ <field name="commerceSku" title="Commerce Sku" type="integer" format=",0"/>
+ <field name="proposition65WarningType" title="Proposition65Warning Type" type="text"/>
+ <field name="displayType" title="Display Type" type="text"/>
+ <field name="powerSource" title="Power Source" type="text"/>
+</fields>

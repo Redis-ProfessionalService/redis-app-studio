@@ -1,0 +1,251 @@
+
+Demonstration Flow  http://localhost:8080/redis/Application.html
+==================
+
+ This demonstration script is intended to cover the entire application solution suite
+ in about 10 minutes - you can spend more time in each application when more time is
+ available.
+
+
+Application Launcher
+--------------------
+
+ Introduce the Toolbar and Grid consisting of columns - these will come to life once
+ we upload data into the application.
+
+ File->Flat Data->Manage
+
+        Title: Human Resources Employees Records (1K)
+  Description: Sample HR employee data set
+    Data File: hr_employee_records_1k.csv
+  Schema File: hr_employee_records_1k.xml
+
+ Press the "Generate..." button
+
+    App Name: HR Data Modeler
+  App Prefix: HRD
+
+ Press the "Create" button
+
+
+HR Data Modeler (HRD)
+---------------
+
+ 1) Scroll down 200 records and back to illustrate speed of application.
+ 2) Select "Hal Farrow" and double-click on the row to show the record details.
+ 3) Enter "finance" in Search Terms and press return.  Clear the search.
+ 4) Press the "Analyze Rows" toolbar button - scroll to the bottom.
+ 5) Select the "Region->Group by Region".  Select "Region->Ungroup".
+ 6) Select "Full Name->Columns", enter 'Mother Name' drag after 'Full Name', hit "Apply".
+ 7) Press the "Schema" toolbar button, deselect "Suggest" for 'full_name', enable
+    "Search" and "Suggest for 'mother_name'.  Press "Update" and "Close".
+ 8) Expand Suggestions, enter "Oma Dodd" and press return.  Clear the search.
+
+ File->Redis Data->Save As->RedisCore
+
+  App Name: HR Redis Application
+  App Prefix: HRC
+
+ Press the "Create" button
+
+
+HR Redis Core (HRC)
+-------------
+
+ 1) Scroll down 200 records and back to illustrate speed of application.
+ 2) Select "Hal Farrow" and press the "Add Row" toolbar button.
+     Employee Id: 12345
+       Full Name: Bob Smith
+ 3) Select "Bob Smith" and press the "Edit Row" toolbar button.
+      Position Title: PS Consultant
+     Office Location: Boston, MA
+ 4) Select "Bob Smith" and press the "Delete Row" toolbar button.
+ 5) Press "Command Grid" toolbar button, scroll a few, select "HSET" and double-click.
+ 6) Press "Application Grid" toolbar button.
+ 7) Press the "Schema" toolbar button, scroll to the bottom, press "Close" button.
+ 8) Press "RedisInsight" toolbar button, select a HASH and select "social_security_number".
+
+
+HR Data Modeler
+---------------
+
+ File->Redis Data->Save As->RediSearch
+
+  App Name: HR Search Application
+  App Prefix: HRS
+
+ Press the "Create" button
+
+
+HR Redis Search (HRS)
+---------------
+
+ 1) Scroll down 200 records and back to illustrate speed of application.
+ 2) Select a top 5 row and double-click on it to show the record details.
+ 3) Enter "business" in Search Terms and press return.
+ 4) Select "Highlight Matches", press "Search" button.  Clear the search.
+ 5) Select "Full Name" column to sort ascending/descending, then "Full Name->Clear Sort"
+    followed by the "Search" button.
+ 6) Press "Advanced Criteria Form" button.
+     Salary          "between"       90000 and 120000   (press Search)
+     Region          "is one of"     South,West         (press Search)
+     Position Title  "starts with"   Account            (press Search)
+ 7) Press the "Schema" toolbar button, scroll to the bottom, press "Close" button.
+ 8) Expand Suggestions, enter "Henry Cotton" and press return.  Clear the search.
+ 9) Press "Command Grid" toolbar button, scroll a few, select "FT.SEARCH" and double-click.
+10) Press "Application Grid" toolbar button.
+
+
+Application Launcher
+--------------------
+
+ File->Hierarchy Data->Manage
+
+        Title: eCommerce Product Data (1K)
+  Description: Sample digital commerce product data set
+    Data File: ecommerce_products_1k.json
+  Schema File: ecommerce_products_1k.xml
+
+ Press the "Generate..." button
+
+    App Name: Product Data Modeler
+  App Prefix: PDM
+
+ Press the "Create" button
+
+
+Product Data Modeler (PDM)
+--------------------
+
+ File->Redis Data->Save As->RediSearch
+
+  App Name: Product Search Application
+  App Prefix: PSA
+   UI Facets: Enabled
+
+ Press the "Create" button
+
+
+Product Data Search Application (PSA)
+-------------------------------
+
+ 1) Select the "Refresh" on the bottom right. 
+ 2) Scroll down 200 records and back to illustrate speed of application.
+ 3) Press the "Schema" toolbar button and scroll to the bottom and back to the top.
+     Enable "Facet" for 'class', 'subclass' and 'department'
+     Press "Update" and "Close"
+ 4) Press the "Search" button, select "DVD Software", "Sports & Fitness". 
+    Clear the search.
+ 5) Enter "iPhone" in Search Terms and press return.
+ 6) Press the "Schema" toolbar button and enable "Facet" for 'color', press "Update" 
+    and "Close".
+ 7) Press the "Search" button.
+ 8) Press the "Settings" toolbar button and reduce "Facet Count" to 5.
+ 9) Press the "Search" button, select "VZW IPHONE HDWARE", "Space Gray". 
+10) Press "Reset" search button.
+
+
+Application Launcher
+--------------------
+
+ 1) Press the "Close" button in the "Hierarchy Data Manager Window".
+ 2) Select "File->Applications->Manage" menu item.
+ 3) Select "RedisGraph.html" and double-click the row to launch application.
+
+
+Movie Graph Application (MGA)
+-----------------------
+
+ 1) Select the "The Godfather" row, expand and collapse it.
+ 2) Select the "Robert Duvall" row, expand and collapse it.
+ 3) Press the "Show Graph" toolbar button, zoom in/out.
+     Select a "Movie" and drag it around.
+     Press the "Options" button and select "Node Shape" as "Box" and "Apply"
+      Zoom in/out
+     Press the "Options" button, press the "Defaults" and "Apply" buttons
+      Zoom in/out
+     Press the "Close" button.
+ 4) Enter "aliens" in Search Terms and press return.
+ 5) Press the "Show Matched Graph" toolbar button, zoom in/out and "Close".
+ 6) Press "Advanced Criteria Form" button.
+     Add Node "Principal" Row with "Birth Year" "greater than"  1960
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+ 8) Press "Reset" search button.
+ 9) Press "Advanced Criteria Form" button.
+     Add Node "Principal" Row with "Name" "starts with" "Bill"
+     Add Relationship "Actor" Row
+     Add Node "Movie" Row
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+     Edit Relationship "Actor" Row increase Hops to "5"
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+10) Press "Advanced Criteria Form" button.
+     Add Node "Principal" Row with "Name" "starts with" "B"
+     Add Relationship "Actor" Row with "Filming Year" "greater than" 1970
+     Add Node "Movie" Row with "Revenue" "greater than" $21,000,000
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+     Edit Relationship "Actor" Row increase Hops to "3"
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+11) Press "Advanced Criteria Form" button.
+     Add Node "Principal" Row with "Birth Year" "greater than"  1960
+     Add Relationship "Director" Row
+     Add Node "Movie" Row
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+     Edit Relationship "Actor" Row increase Hops to "3"
+    Press the "Show Matched Graph" toolbar button, zoom in/out and "Close"
+12) Press "Command Grid" toolbar button, select "GRAPH.QUERY" and double-click.
+13) Press "Application Grid" toolbar button.
+14) Press "RedisInsight" toolbar button, filter by "Graph"
+     Select "RG:RG:GP:DD:MN:Internet Movie Database"
+     Select "Workbench" on right
+     Enter: GRAPH.QUERY 'RG:RG:GP:DD:MN:Internet Movie Database' 'MATCH (n)-[r]-() RETURN n,r'
+
+
+Application Launcher
+--------------------
+
+ 1) Select "RAS-Framework.html" and double-click the row to launch application.
+
+
+Redis App Studio Developer API
+------------------------------
+
+ 1) Select "Data Source Redis Classes"
+ 2) Select "com.redis.ds.ds_redis.graph" package.
+ 3) Select "RedisGraphs" class.
+    Scroll down
+
+
+Application Launcher
+--------------------
+
+ 1) Press the "Close" button in the "Application Manager Window".
+ 2) Press "Release Grid" toolbar button.
+
+
+
+
+
+
+
+
+
+
+======================================================================================
+
+Application Launcher
+--------------------
+
+ File->Hierarchy Data->Manage
+
+                     Title: Internet Movie Database
+               Description: Sample IMDb principals and movie data set
+           Graph Data File: graph_movies_data.csv
+          Node Schema File: graph_movies_edge_schema.xml
+  Relationship Schema File: 
+
+ Press the "Generate..." button
+
+    App Name: Movie Data Modeler
+  App Prefix: MDM
+
+ Press the "Create" button

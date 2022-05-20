@@ -1,0 +1,7 @@
+document_name[Text](Document Name),document_title[Text](Document Title),document_type[Text](Document Text),document_description[Text](Document Description),document_date[Text](Date Uploaded),document_size[Long](Document Size)
+hr_employee_records_1k.csv,Human Resources Employees Records (1K),Data Records,Sample HR employee data set,Jan-11-2022 10:15:00,3961262
+hr_employee_records_1k.xml,Human Resources Employees Records (1K),Schema Definition,Sample HR employee data set,Jan-11-2022 10:20:00,2335
+product_electronics.csv,Product Electronics (101),Data Records,E-Commerce Product Electronics data set,Feb-11-2022 11:15:00,70251
+product_electronics.xml,Product Electronics (101),Schema Definition,E-Commerce Product Electronics data set,Feb-11-2022 11:20:00,864
+financial_cc_transactions.csv,Financial Credit Card Transactions,Data Records,Sample credit card transaction data set 1K records,Mar-27-2022 08:42:36,185943
+financial_cc_transactions.xml,Financial Credit Card Transactions,Schema Definition,Sample credit card transaction data set 1K records,Mar-27-2022 08:42:36,1291

@@ -1,0 +1,59 @@
+<DataSource ID="RSJ-AppViewGrid" serverConstructor="com.redis.app.redis_app_studio.rsj.AppViewGridDS">
+ <fields>
+  <field name="sku" title="SKU" type="integer" detail="true" primaryKey="true" format="#"/>
+  <field name="productId" title="Product Id" type="integer" detail="true" format="#"/>
+  <field name="name" title="Name" type="text"/>
+  <field name="type" title="Type" type="text" width="75"/>
+  <field name="longDescription" title="Description" type="text" showHover="true"/>
+  <field name="class" title="Classification" type="text" width="150"/>
+  <field name="subclass" title="Category" type="text" width="150"/>
+  <field name="department" title="Department" type="text" width="150"/>
+  <field name="color" title="Color" type="text" width="75"/>
+  <field name="regularPrice" title="Price" type="float" format="¤,0.00" width="75"/>
+  <field name="startDate" title="Available Date" type="date" format="MMMM dd, yyyy" width="120"/>
+  <field name="lowPriceGuarantee" title="Price Guarantee" type="boolean" detail="true"/>
+  <field name="activeUpdateDate" title="Active Date" type="datetime" detail="true" format="MMMM dd, yyyy HH:MM"/>
+  <field name="salePrice" title="Sale Price" type="float" detail="true" format="¤,0.00"/>
+  <field name="onSale" title="On Sale" type="boolean" detail="true"/>
+  <field name="priceUpdateDate" title="Price Date" type="datetime" detail="true" format="MMMM dd, yyyy HH:MM"/>
+  <field name="digital" title="Digital" type="boolean" detail="true"/>
+  <field name="salesRankMediumTerm" title="Rank Medium" type="integer" detail="true" format=",0"/>
+  <field name="salesRankLongTerm" title="Rank Long" type="integer" detail="true" format=",0"/>
+  <field name="bestSellingRank" title="Rank Best" type="integer" detail="true" format=",0"/>
+  <field name="upc" title="UPC" type="text" detail="true"/>
+  <field name="productTemplate" title="Product Template" type="text" detail="true"/>
+  <field name="customerReviewCount" title="Review Count" type="integer" detail="true" format=",0"/>
+  <field name="customerReviewAverage" title="Review Average" type="float" detail="true" format=",0.00"/>
+  <field name="customerTopRated" title="Top Rated" type="boolean" detail="true"/>
+  <field name="freeShipping" title="Free Shipping" type="boolean" detail="true"/>
+  <field name="inStoreAvailability" title="Store Availability" type="boolean" detail="true"/>
+  <field name="itemUpdateDate" title="Item Date" type="datetime" detail="true" format="MMMM dd, yyyy HH:MM"/>
+  <field name="onlineAvailability" title="Online Availability" type="boolean" detail="true"/>
+  <field name="onlineAvailabilityText" title="Availability Info" type="text" detail="true"/>
+  <field name="onlineAvailabilityUpdateDate" title="Availability Date" type="datetime" detail="true" format="MMMM dd, yyyy HH:MM"/>
+  <field name="shortDescription" title="Alternate Description" type="text" detail="true"/>
+  <field name="protectionPlanTerm" title="Protection Plan" type="text" detail="true"/>
+  <field name="manufacturer" title="Manufacturer" type="text" detail="true"/>
+  <field name="modelNumber" title="Model Number" type="text" detail="true"/>
+  <field name="condition" title="Condition" type="text" detail="true"/>
+  <field name="inStorePickup" title="Store Pickup" type="boolean" detail="true"/>
+  <field name="homeDelivery" title="Home Delivery" type="boolean" detail="true"/>
+  <field name="quantityLimit" title="Quantity Limit" type="integer" detail="true" format=",0"/>
+  <field name="depth" title="Depth" type="text" detail="true"/>
+  <field name="height" title="Height" type="text" detail="true"/>
+  <field name="orderable" title="Orderable" type="text" detail="true"/>
+  <field name="weight" title="Weight" type="text" detail="true"/>
+  <field name="shippingWeight" title="Shipping Weight" type="float" detail="true" format=",0.00"/>
+  <field name="width" title="Width" type="text" detail="true"/>
+  <field name="marketplace" title="Marketplace" type="boolean" detail="true"/>
+  <field name="displayType" title="Display Type" type="text" detail="true"/>
+  <field name="powerSource" title="Power Source" type="text" detail="true"/>
+  <field name="ras_context" title="RAS Context" type="text" hidden="true" detail="true"/>
+ </fields>
+ <operationBindings>
+  <binding operationId="exportData" operationType="fetch" serverMethod="exportData">
+   <serverObject  lookupStyle="new" className="com.redis.app.redis_app_studio.rsj.AppViewExportGridDS"/>
+  </binding>
+ </operationBindings>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

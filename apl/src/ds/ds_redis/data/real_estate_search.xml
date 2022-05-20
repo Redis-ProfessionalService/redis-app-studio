@@ -1,0 +1,14 @@
+<DataDoc name="real_estate" indexName="real_estate">
+ <Item type="Text" name="property_name" title="Property Name" isPrimary="true" />
+ <Item type="Text" name="street" title="Street" />
+ <Item type="Text" name="city" title="City"  />
+ <Item type="Integer" name="zip" title="ZIP Code"/>
+ <Item type="Text" name="state" title="State" />
+ <Item type="Integer" name="beds" title="Number of Beds"/>
+ <Item type="Integer" name="baths" title="Number of Baths"/>
+ <Item type="Integer" name="square_feet" title="Square Feet"/>
+ <Item type="Text" name="property_type" title="Property Type"/>
+ <Item type="Text" name="sale_date" title="Sale Date"/>
+ <Item type="Double" name="sale_price" title="Sale Price"/>
+ <Item type="Text" name="location" title="Location (Longitude,Latitude)" isGeo="true"/>
+</DataDoc>

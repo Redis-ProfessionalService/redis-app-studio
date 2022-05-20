@@ -1,0 +1,9 @@
+<DataDoc retentionTime="0" isUncompressed="true" memoryChunkSize="4000" duplicatePolicy="BLOCK">
+ <Item type="DateTime" name="start_date" title="Start Date">2013-02-08</Item>
+ <Item type="DateTime" name="finish_date" title="Finish Date">2018-02-07</Item>
+ <Item type="Text" name="exchange_name" title="Exchange Name">NASDAQ</Item>
+ <Item type="Text" name="stock_symbol" title="Stock Symbol">AAPL</Item>
+ <Item type="Text" name="stock_event" title="Stock Event"/>
+ <Item type="Text" name="company_name" title="Company Name">Apple Inc.</Item>
+ <Item type="Text" name="company_description" title="Company Description">Apple Inc. is an American multinational technology company.</Item>
+</DataDoc>

@@ -1,0 +1,28 @@
+<DataDoc name="HR Employees">
+ <Item type="Integer" name="employee_id" title="Employee Id" isPrimary="true" dataFormat="#" isVisible="true"/>
+ <Item type="Text" name="full_name" title="Full Name" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="gender" title="Gender" isVisible="true"/>
+ <Item type="Text" name="email_address" title="Email Address" isVisible="true"/>
+ <Item type="Text" name="father_name" title="Father Name" isVisible="true" isSuggest="true" isSearch="true"/>
+ <Item type="Text" name="mother_name" title="Mother Name" isVisible="true"/>
+ <Item type="Text" name="position_title" title="Positioh Title" isVisible="true"/>
+ <Item type="Text" name="office_location" title="Office Location" isVisible="true"/>
+ <Item type="Text" name="industry_focus" title="Industry Focus" isVisible="true"/>
+ <Item type="Text" name="job_description" title="Job Description" isVisible="true"/>
+ <Item type="Date" name="date_of_birth" title="Date of Birth" isVisible="true" isRequired="true"/>
+ <Item type="Float" name="age_in_years" title="Age in Years" isVisible="true"/>
+ <Item type="DateTime" name="date_of_joining" title="Date of Joining" isVisible="true"/>
+ <Item type="Float" name="age_in_company" title="Age in Company" isVisible="true"/>
+ <Item type="Integer" name="salary" title="Salary" isVisible="true"/>
+ <Item type="Text" name="last_percent_hike" title="Last Percent Hike" isVisible="true"/>
+ <Item type="Text" name="social_security_number" title="Social Security Number" isVisible="true"/>
+ <Item type="Text" name="phone_number" title="Phone Number" isVisible="true"/>
+ <Item type="Text" name="place_name" title="Place Name" isVisible="true"/>
+ <Item type="Text" name="county" title="County" isVisible="true"/>
+ <Item type="Text" name="city" title="City" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="state" title="State" isVisible="true" isRequired="true"/>
+ <Item type="Integer" name="zip" title="Zip Code" dataFormat="#" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="region" title="Region" isVisible="true"/>
+ <Item type="Text" name="user_name" title="User Name" isVisible="true" isRequired="true"/>
+ <Item type="Text" name="password" title="Password" isVisible="true" isRequired="true" isSecret="true"/>
+</DataDoc>

@@ -1,0 +1,12 @@
+<DataSource ID="RJ-SchemaGrid" serverConstructor="com.redis.app.redis_app_studio.rj.SchemaGridDS">
+ <fields>
+  <field name="item_name" title="Name" type="text" primaryKey="true" canEdit="false" frozen="true" width="150" />
+  <field name="item_type" title="Type" type="text" canEdit="false" frozen="true" width="75" />
+  <field name="item_title" title="Title" type="text" canEdit="false" width="150" />
+  <field name="json_path" title="Path" type="text" canEdit="false" width="150" />
+  <field name="isPrimary" title="Primary" type="boolean" width="50" />
+  <field name="isRequired" title="Required" type="boolean" width="60" />
+  <field name="isVisible" title="On Grid" type="boolean" width="50" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

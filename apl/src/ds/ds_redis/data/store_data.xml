@@ -1,0 +1,13 @@
+<DataDoc>
+ <Item type="Text" name="company_name" title="Company Name" isVisible="true" />
+ <Item type="Text" name="company_location" title="Company Location" isVisible="true" jPath="$['company_location']" />
+ <Item type="Integer" name="company_ranking" title="Company Ranking" isVisible="true" />
+ <Item type="Double" name="company_revenue" title="Company Revenue" isVisible="true" />
+ <Item type="Text" name="book_titles" title="Book Titles" isVisible="true" jPath="$.store.book[*].title" />
+ <Item type="Double" name="store_prices" title="Store Prices" isVisible="true" jPath="$.store..price" />
+ <Item type="Text" name="book_bs_title" title="Best Seller Title" isVisible="true" jPath="$.store.book[3].title" />
+ <Item type="Text" name="book_bs_author" title="Best Seller Author" isVisible="true" jPath="$.store.book[3].author" />
+ <Item type="Text" name="book_bs_category" title="Best Seller Category" isVisible="true" jPath="$.store.book[3].category" />
+ <Item type="Double" name="book_bs_price" title="Best Seller Price" isVisible="true" jPath="$.store.book[3].price" />
+ <Item type="Text" name="book_isbn_id" title="Books with ISBN" isVisible="true" jPath="$.store.book[3].isbn" />
+</DataDoc>

@@ -1,0 +1,11 @@
+<DataSource ID="DM-DataModelerGrid" serverConstructor="com.redis.app.redis_app_studio.dm.AppViewGridDS">
+ <fields>
+  <field name="column_one" title="Column One" type="text" required="true" primaryKey="true"/>
+  <field name="column_two" title="Column Two" type="text"/>
+  <field name="column_three" title="Column Three" type="text"/>
+  <field name="column_four" title="Column Four" type="text"/>
+  <field name="column_five" title="Column Five" type="text"/>
+  <field name="column_six" title="Column Six" type="text"/>
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

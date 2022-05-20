@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.redis.ds.ds_redis"},{"l":"com.redis.ds.ds_redis.core"},{"l":"com.redis.ds.ds_redis.graph"},{"l":"com.redis.ds.ds_redis.json"},{"l":"com.redis.ds.ds_redis.search"},{"l":"com.redis.ds.ds_redis.shared"},{"l":"com.redis.ds.ds_redis.time_series"}];updateSearchResults();

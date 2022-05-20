@@ -1,0 +1,12 @@
+<DataDoc name="product_electronics" indexName="product_electronics" stopWords="data/stop-words.txt">
+ <Item type="Integer" name="sku" title="SKU" fieldWeight="0.5" isPrimary="true"/>
+ <Item type="Text" name="name" title="Name" fieldWeight="1.0" isSuggest="true"/>
+ <Item type="Text" name="type" title="Type" fieldWeight="0.5"/>
+ <Item type="DateTime" name="activeUpdateDate" title="Active Date" fieldWeight="0.5"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" fieldWeight="0.5"/>
+ <Item type="Text" name="shortDescription" title="Short Description" fieldWeight="1.0" />
+ <Item type="Text" name="longDescription" title="Long Description" fieldWeight="0.5"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" fieldWeight="0.5"/>
+ <Item type="Text" name="department" title="Department"/>
+ <Item type="Text" name="color" title="Color"/>
+</DataDoc>

@@ -1,0 +1,50 @@
+<!-- File System Connector Logback Configuration Properties -->
+<!-- http://logback.qos.ch/manual/configuration.html -->
+<configuration scan="true" scanPeriod="5 minutes" >
+ <!-- http://logback.qos.ch/manual/appenders.html -->
+ <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  <file>${TOMCAT_HOME}/logs/redis_app_studio.log</file>
+  <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+   <fileNamePattern>rw_{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+   <minIndex>1</minIndex>
+   <maxIndex>4</maxIndex>
+  </rollingPolicy>
+  <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+   <maxFileSize>10MB</maxFileSize>
+  </triggeringPolicy>
+  <encoder>
+   <pattern>%date %level [%thread] %logger{40} - %msg%n</pattern>
+  </encoder>
+ </appender>
+ <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  <encoder>
+   <pattern>%logger{40} - %msg%n</pattern>
+  </encoder>
+ </appender>
+ <!-- Supported Levels: ALL, TRACE, DEBUG, INFO, WARN, ERROR or OFF -->
+ <!--
+ <root level="INFO">
+   <appender-ref ref="FILE" />
+ </root>
+ -->
+ <logger name="com.redis.app.redis_app_studio" level="TRACE">
+  <appender-ref ref="FILE" />
+ </logger>
+ <!--
+ <logger name="com.redis.app.redis_app_studio.shared.SessionContext" level="DEBUG">
+  <appender-ref ref="FILE" />
+ </logger>
+ <logger name="com.redis.app.redis_app_studio.shared.SCDSRequest" level="DEBUG">
+  <appender-ref ref="FILE" />
+ </logger>
+ <logger name="com.redis.app.redis_app_studio.ds" level="DEBUG">
+  <appender-ref ref="FILE" />
+ </logger>
+ <logger name="com.redis.foundation" level="ERROR">
+  <appender-ref ref="FILE" />
+ </logger>
+  <logger name="com.redis.ds.ds_redis" level="ALL">
+  <appender-ref ref="FILE" />
+ </logger>
+-->
+</configuration>

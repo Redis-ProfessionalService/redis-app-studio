@@ -1,0 +1,50 @@
+<DataDoc name="eCommerce Product Data">
+ <Item type="Integer" name="sku" title="SKU" dataFormat="#" uiFormat="#" jPath="$.sku" isPrimary="true" isRequired="true" isVisible="false"/>
+ <Item type="Long" name="productId" title="Product Id" dataFormat="#" uiFormat="#" jPath="$.productId" isVisible="false"/>
+ <Item type="Text" name="name" title="Name" jPath="$.name" isVisible="true" isSearch="true" isSuggest="true"/>
+ <Item type="Text" name="type" title="Type" jPath="$.type" isVisible="true" uiWidth="75"/>
+ <Item type="Text" name="longDescription" title="Description" jPath="$.longDescription" isVisible="true" uiShowHover="true" isSearch="true"/>
+ <Item type="Text" name="class" title="Classification" jPath="$.class" isVisible="true" uiWidth="150"/>
+ <Item type="Text" name="subclass" title="Category" jPath="$.subclass" isVisible="true" uiWidth="150"/>
+ <Item type="Text" name="department" title="Department" jPath="$.department" isVisible="true" uiWidth="150"/>
+ <Item type="Text" name="color" title="Color" jPath="$.color" isVisible="true" uiWidth="75"/>
+ <Item type="Double" name="regularPrice" title="Price" dataFormat="###,###.####" uiFormat="&#x00A4;,0.00" jPath="$.regularPrice" isVisible="true" uiWidth="75"/>
+ <Item type="Date" name="startDate" title="Available Date" dataFormat="yyyy-MM-dd" uiFormat="MMMM dd, yyyy" jPath="$.startDate" isVisible="true" uiWidth="120"/>
+ <Item type="Boolean" name="lowPriceGuarantee" title="Price Guarantee" jPath="$.lowPriceGuarantee" isVisible="false"/>
+ <Item type="DateTime" name="activeUpdateDate" title="Active Date" dataFormat="yyyy-MM-dd'T'HH:mm:ss" uiFormat="MMMM dd, yyyy HH:MM" jPath="$.activeUpdateDate" isVisible="false"/>
+ <Item type="Double" name="salePrice" title="Sale Price" dataFormat="###,###.####"  uiFormat="&#x00A4;,0.00" jPath="$.salePrice" isVisible="false"/>
+ <Item type="Boolean" name="onSale" title="On Sale" jPath="$.onSale" isVisible="false"/>
+ <Item type="DateTime" name="priceUpdateDate" title="Price Date" dataFormat="yyyy-MM-dd'T'HH:mm:ss" uiFormat="MMMM dd, yyyy HH:MM" jPath="$.priceUpdateDate" isVisible="false"/>
+ <Item type="Boolean" name="digital" title="Digital" jPath="$.digital" isVisible="false"/>
+ <Item type="Integer" name="salesRankMediumTerm" title="Rank Medium" dataFormat="###,###,###" uiFormat=",0" jPath="$.salesRankMediumTerm" isVisible="false"/>
+ <Item type="Integer" name="salesRankLongTerm" title="Rank Long" dataFormat="###,###,###" uiFormat=",0" jPath="$.salesRankLongTerm" isVisible="false"/>
+ <Item type="Integer" name="bestSellingRank" title="Rank Best" dataFormat="###,###,###" uiFormat=",0" jPath="$.bestSellingRank" isVisible="false"/>
+ <Item type="Text" name="upc" title="UPC" jPath="$.upc" isVisible="false"/>
+ <Item type="Text" name="productTemplate" title="Product Template" jPath="$.productTemplate" isVisible="false"/>
+ <Item type="Integer" name="customerReviewCount" title="Review Count" dataFormat="###,###,###" uiFormat=",0" jPath="$.customerReviewCount" isVisible="false"/>
+ <Item type="Double" name="customerReviewAverage" title="Review Average" dataFormat="###,###.####" uiFormat=",0.00" jPath="$.customerReviewAverage" isVisible="false"/>
+ <Item type="Boolean" name="customerTopRated" title="Top Rated" jPath="$.customerTopRated" isVisible="false"/>
+ <Item type="Boolean" name="freeShipping" title="Free Shipping" jPath="$.freeShipping" isVisible="false"/>
+ <Item type="Boolean" name="inStoreAvailability" title="Store Availability" jPath="$.inStoreAvailability" isVisible="false"/>
+ <Item type="DateTime" name="itemUpdateDate" title="Item Date" dataFormat="yyyy-MM-dd'T'HH:mm:ss" uiFormat="MMMM dd, yyyy HH:MM" jPath="$.itemUpdateDate" isVisible="false"/>
+ <Item type="Boolean" name="onlineAvailability" title="Online Availability" jPath="$.onlineAvailability" isVisible="false"/>
+ <Item type="Text" name="onlineAvailabilityText" title="Availability Info" jPath="$.onlineAvailabilityText" isVisible="false"/>
+ <Item type="DateTime" name="onlineAvailabilityUpdateDate" title="Availability Date" dataFormat="yyyy-MM-dd'T'HH:mm:ss" uiFormat="MMMM dd, yyyy HH:MM" jPath="$.onlineAvailabilityUpdateDate" isVisible="false"/>
+ <Item type="Text" name="shortDescription" title="Alternate Description" jPath="$.shortDescription" isVisible="false" />
+ <Item type="Text" name="protectionPlanTerm" title="Protection Plan" jPath="$.protectionPlanTerm" isVisible="false"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" jPath="$.manufacturer" isVisible="false"/>
+ <Item type="Text" name="modelNumber" title="Model Number" jPath="$.modelNumber" isVisible="false"/>
+ <Item type="Text" name="condition" title="Condition" jPath="$.condition" isVisible="false"/>
+ <Item type="Boolean" name="inStorePickup" title="Store Pickup" jPath="$.inStorePickup" isVisible="false"/>
+ <Item type="Boolean" name="homeDelivery" title="Home Delivery" jPath="$.homeDelivery" isVisible="false"/>
+ <Item type="Integer" name="quantityLimit" title="Quantity Limit" dataFormat="###,###,###" uiFormat=",0" jPath="$.quantityLimit" isVisible="false"/>
+ <Item type="Text" name="depth" title="Depth" jPath="$.depth" isVisible="false"/>
+ <Item type="Text" name="height" title="Height" jPath="$.height" isVisible="false"/>
+ <Item type="Text" name="orderable" title="Orderable" jPath="$.orderable" isVisible="false"/>
+ <Item type="Text" name="weight" title="Weight" jPath="$.weight" isVisible="false"/>
+ <Item type="Double" name="shippingWeight" title="Shipping Weight" dataFormat="###,###.####" uiFormat=",0.00" jPath="$.shippingWeight" isVisible="false"/>
+ <Item type="Text" name="width" title="Width" jPath="$.width" isVisible="false"/>
+ <Item type="Boolean" name="marketplace" title="Marketplace" jPath="$.marketplace" isVisible="false"/>
+ <Item type="Text" name="displayType" title="Display Type" jPath="$.displayType" isVisible="false"/>
+ <Item type="Text" name="powerSource" title="Power Source" jPath="$.powerSource" isVisible="false"/>
+</DataDoc>

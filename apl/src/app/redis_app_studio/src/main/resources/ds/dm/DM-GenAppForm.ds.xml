@@ -1,0 +1,56 @@
+<DataSource ID="DM-GenAppForm" serverConstructor="com.redis.app.redis_app_studio.dm.GenAppFormDS">
+ <fields>
+  <field name="app_group" title="App Group" type="text"  defaultValue="Redis App Studio" required="true" />
+  <field name="app_name" title="App Name" type="text" defaultValue="Data Modeler" primaryKey="true" required="true" />
+  <field name="app_prefix" title="App Prefix" type="text" length="3" required="true" />
+  <field name="app_type" title="App Type" type="text" defaultValue="Data Modeler">
+   <valueMap>
+    <value>Data Modeler</value>
+    <value>RediSearch</value>
+    <value>Redis Core</value>
+    <value>RedisGraph</value>
+    <value>RedisTimeSeries</value>
+   </valueMap>
+  </field>
+  <field name="ds_structure" title="DS Structure" type="text" canEdit="false" defaultValue="Flat">
+   <valueMap>
+    <value>Flat</value>
+    <value>Hierarchy</value>
+   </valueMap>
+  </field>
+  <field name="ds_title" title="DS Title" type="text" canEdit="false" />
+  <field name="grid_height" title="Grid Height" type="integer" canEdit="true" />
+  <field name="rc_storage_type" title="Storage Type" type="text" defaultValue="SH" canEdit="true">
+   <valueMap>
+     <value ID="SH">Sorted Set of Hashes</value>
+     <value ID="LH">List of Hashes</value>
+     <value ID="LS">List of Strings</value>
+     <value ID="SS">Sorted Set of Strings</value>
+    </valueMap>
+   </field>
+  <field name="ui_facets" title="UI Facets" type="text" canEdit="true" />
+  <field name="skin_name" title="UI Theme" type="text" defaultValue="Tahoe" >
+   <valueMap>
+    <value>Tahoe</value>
+    <!-- need better icons before enabling
+    <value>Stratus</value>
+    <value>TreeFrog</value>
+    <value>Obsidian</value>
+    <value>Graphite</value>
+    <value>BlackOps</value>
+    <value>Simplicity</value>
+    <value>Enterprise</value>
+    <value>EnterpriseBlue</value>
+    -->
+   </valueMap>
+  </field>
+  <field name="gen_ds_1" title="Gen DS 1" type="text" hidden="true" />
+  <field name="gen_ds_2" title="Gen DS 2" type="text" hidden="true" />
+  <field name="gen_ds_3" title="Gen DS 3" type="text" hidden="true" />
+  <field name="gen_ds_4" title="Gen DS 4" type="text" hidden="true" />
+  <field name="gen_ds_5" title="Gen DS 5" type="text" hidden="true" />
+  <field name="gen_html" title="Gen HTML" type="text" hidden="true" />
+  <field name="gen_link" title="Gen Link" type="text" hidden="true" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

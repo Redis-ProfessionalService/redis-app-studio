@@ -1,0 +1,3 @@
+document_name[Text](Document Name),document_title[Text](Document Title),document_type[Text](Document Text),document_description[Text](Document Description),document_date[Text](Date Uploaded),document_size[Long](Document Size)
+RedisDataTypes-Introduction.docx,An introduction to Redis Data Types and Abstractions,MS Word,None,Jan-06-2021 10:15:00,44364
+RedisDataTypes-Introduction.pdf,An introduction to Redis Data Types and Abstractions,PDF,None,Jan-06-2021 10:20:00,307417

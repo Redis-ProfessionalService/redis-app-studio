@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../../../search-nlp-ml/apl/src/ml/kaggle/learn01/hello-world" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../search-nlp-ml/apl/src/ml/kaggle/learning02/hello-world" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../search-nlp-ml/apl/src/ml/kaggle/learning03/hello-spark" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home" />
+  </component>
+</project>

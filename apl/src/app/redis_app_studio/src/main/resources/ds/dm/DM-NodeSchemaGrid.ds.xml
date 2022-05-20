@@ -1,0 +1,15 @@
+<DataSource ID="DM-NodeSchemaGrid" serverConstructor="com.redis.app.redis_app_studio.dm.NodeSchemaGridDS">
+ <fields>
+  <field name="item_name" title="Name" type="text" primaryKey="true" canEdit="false" frozen="true" width="150" />
+  <field name="item_type" title="Type" type="text" canEdit="false" frozen="true" width="75" />
+  <field name="item_title" title="Title" type="text" canEdit="false" width="150" />
+  <field name="isPrimary" title="Primary" type="boolean" width="50" />
+  <field name="isRequired" title="Required" type="boolean" width="60" />
+  <field name="isVisible" title="On Grid" type="boolean" width="50" />
+  <field name="isSearch" title="Search" type="boolean" width="50" />
+  <field name="isSuggest" title="Suggest" type="boolean" width="50" />
+  <field name="isGraphLabel" title="Graph Label" type="boolean" width="80" />
+  <field name="isGraphTitle" title="Graph Title" type="boolean" width="80" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

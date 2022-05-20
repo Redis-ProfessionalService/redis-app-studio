@@ -1,0 +1,72 @@
+
+table.ahTable {
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+ 	font-size: large;
+	color: Black;
+	margin: 0px;
+	padding: 0px;
+}
+
+img.ahImage {
+	width: auto;
+	height: auto;
+}
+
+td.ahGroup {
+	text-align: left;
+	font-weight: bold;
+}
+
+td.ahName {
+	text-align: right;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.alternateGridCell {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:black;
+	border-bottom:1px solid #ffffff; border-top:1px solid #ffffff;
+	background-color:#ffffff;
+}
+.alternateGridCellDark {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:black;
+	border-bottom:1px solid #f0f0e8; border-top:1px solid #f0f0e8;
+	background-color:#f0f0e8;
+}
+.alternateGridCellOver,
+.alternateGridCellOverDark {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:black;
+	border-bottom:1px solid #c0c0c0; border-top:1px solid #c0c0c0;
+	background-color:#ffffc0;
+}
+.alternateGridCellSelected,
+.alternateGridCellSelectedDark {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:black;
+	border-bottom:1px solid #c0c0ff; border-top:1px solid #c0c0ff;
+	background-color:#c0c0ff;
+}
+.alternateGridCellSelectedOver,
+.alternateGridCellSelectedOverDark {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:black;
+	border-bottom:1px solid #a0a0a0; border-top:1px solid #a0a0a0;
+	background-color:#e0e0ff;
+}
+.alternateGridCellDisabled {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:#808080;
+	border-bottom:1px solid #ffffff; border-top:1px solid #ffffff;
+	background-color:#ffffff;
+}
+.alternateGridCellDisabledDark {
+	font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;
+	color:#808080;
+	border-bottom:1px solid #f0f0e8; border-top:1px solid #f0f0e8;
+	background-color:#f0f0e8;
+}
+

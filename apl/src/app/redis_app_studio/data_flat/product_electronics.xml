@@ -1,0 +1,12 @@
+<DataDoc name="eCommerce Product Electronics">
+ <Item type="Integer" name="sku" title="SKU" dataFormat="#" isPrimary="true" isRequired="true" isVisible="false"/>
+ <Item type="Text" name="name" title="Name" isVisible="true" isSuggest="true"  isSearch="true"/>
+ <Item type="Text" name="type" title="Type" isVisible="true"/>
+ <Item type="Text" name="activeUpdateDate" title="Active Date" dataFormat="MMM-dd-yyyy HH:mm:ss" isVisible="true"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" dataFormat="###,###.####" uiFormat="&#x00A4;,0" isVisible="true"/>
+ <Item type="Text" name="shortDescription" title="Short Description" isVisible="true"/>
+ <Item type="Text" name="longDescription" title="Long Description" isVisible="true" isSearch="true"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" isVisible="true"/>
+ <Item type="Text" name="department" title="Department" isVisible="true"/>
+ <Item type="Text" name="color" title="Color" isVisible="true"/>
+</DataDoc>

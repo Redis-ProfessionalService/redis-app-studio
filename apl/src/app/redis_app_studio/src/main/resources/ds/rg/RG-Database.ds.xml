@@ -1,0 +1,22 @@
+<DataSource ID="RG-Database" serverConstructor="com.redis.app.redis_app_studio.rg.DatabaseDS">
+ <fields>
+  <field name="id" title="Id" type="text" hidden="true" />
+  <field name="redis_version" title="Redis Version" type="text" />
+  <field name="redis_mode" title="Redis Mode" type="text" />
+  <field name="os" title="OS" type="text" />
+  <field name="process_id" title="Process Id" type="text" />
+  <field name="tcp_port" title="TCP Port" type="text" />
+  <field name="uptime_in_seconds" title="Uptime In Seconds" type="text" />
+  <field name="uptime_in_days" title="Uptime In Days" type="text" />
+  <field name="connected_clients" title="Connected Clients" type="text" />
+  <field name="used_memory_human" title="Used Memory" type="text" />
+  <field name="total_system_memory_human" title="Total System Memory" type="text" />
+  <field name="total_reads_processed" title="Total Reads Processed" type="text" />
+  <field name="total_writes_processed" title="Total Writes Processed" type="text" />
+  <field name="role" title="Role" type="text" />
+  <field name="used_cpu_sys" title="Used CPU System" type="text" />
+  <field name="used_cpu_user" title="Used CPU User" type="text" />
+  <field name="ras_context" title="RAS Context" type="text" primaryKey="true" hidden="true"/>
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

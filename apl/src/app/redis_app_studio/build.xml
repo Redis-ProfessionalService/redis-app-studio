@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ===========================================================
+1) This Ant build could be using the Maven plug-in component.
+   You must copy the "maven-ant-tasks-2.1.2.jar" to the ant
+   lib folder before it will work properly.
+2) Use "ant -projecthelp" to see all top-level tasks.
+============================================================ -->
+<project name="Redis App Studio" default="help" basedir="."
+         xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+  <!-- https://ant.apache.org/manual/Tasks/property.html -->
+  <property environment="env"/>
+  <property name="app.base" value="redis"/>
+  <property name="app.name" value="${app.base}.war"/>
+  <property name="war.name" value="target/${app.name}"/>
+  <property name="sc.sdk" value="${env.SC_RUNTIME}"/>
+  <property name="apl.jar" value="${env.APLJAR}"/>
+  <property name="apl.doc" value="${env.APLDOC}"/>
+  <property name="tsc.bin" value="${env.TSC_BIN}"/>
+  <property name="maven.home" location="${env.M2_HOME}"/>
+  <property name="tomcat.home" location="${env.TOMCAT_HOME}"/>
+
+  <fail unless="sc.sdk" message="You must have the SC_HOME environment variable defined."/>
+  <fail unless="tsc.bin" message="You must have the TSC_BIN  environment variable defined."/>
+  <fail unless="maven.home" message="You must have the M2_HOME environment variable defined."/>
+  <fail unless="tomcat.home" message="You must have the TOMCAT_HOME environment variable defined."/>
+
+  <!-- Project Target Definitions -->
+  <target name="help">
+	<echo>This Ant build file assumes that you have used Maven to compile your Java source</echo>
+	<echo>files (e.g. mvn compile). After that is done, this build file can be used to</echo>
+	<echo>create the WAR file.</echo>
+	<echo></echo>
+	<echo>Ant Targets:</echo>
+	<echo>maven_compile - Uses Maven to compile Java source code</echo>
+	<echo>ts_compile    - Uses TypeScript compiler to generate JS code</echo>
+	<echo>dev_war       - Create a WAR for Redis development</echo>
+	<echo>                + Compiles Java and builds WAR file</echo>
+	<echo>kit_war       - Create a WAR for RL release kit - NEEDS LOGIC</echo>
+	<echo>deploy_mac    - Deploy package to Tomcat and launch browser on Mac OS</echo>
+	<echo>patch_ui      - Patch UI within Tomcat</echo>
+	<echo>patch_classes - Patch classes within Tomcat and launch browser on Mac OS</echo>
+	<echo>browser_mac   - Launch application in browser on Mac OS</echo>
+	<echo>ftp           - Upload war file to RL web site</echo>
+	<echo>clean         - Removes compiled components</echo>
+	<echo></echo>
+	<echo>ant clean dev_war deploy_mac</echo>
+  </target>
+
+  <!-- Project Maven Dependencies -->
+  <artifact:dependencies pathId="maven.class.path" filesetId="maven.fileset" useScope="runtime">
+	<dependency groupId="com.redis" artifactId="foundation" version="1.0"/>
+	<dependency groupId="com.redis.ds" artifactId="ds_content" version="1.0"/>
+	<dependency groupId="com.redis.ds" artifactId="ds_grid" version="1.0"/>
+	<dependency groupId="com.redis.ds" artifactId="ds_json" version="1.0"/>
+	<dependency groupId="com.redis.ds" artifactId="ds_graph" version="1.0"/>
+	<dependency groupId="com.redis.ds" artifactId="ds_redis" version="1.0"/>
+	<dependency groupId="org.apache.commons" artifactId="commons-collections4" version="4.4"/>
+	<dependency groupId="commons-fileupload" artifactId="commons-fileupload" version="1.4"/>
+  </artifact:dependencies>
+
+  <target name="classes-folder-exists" unless="classes.folder.exists">
+    <available property="classes.folder.exists" file="target/classes"/>
+  </target>
+
+  <target name="app_war" depends="classes-folder-exists" description="Creates an application WAR file">
+    <mkdir dir="target/war/js" />
+    <mkdir dir="target/war/doc" />
+    <mkdir dir="target/war/doc/api" />
+    <mkdir dir="target/war/data_flat" />
+    <mkdir dir="target/war/data_hierarchy" />
+    <mkdir dir="target/war/applications" />
+    <mkdir dir="target/war/documents" />
+    <mkdir dir="target/war/isomorphic" />
+    <mkdir dir="target/war/shared" />
+    <mkdir dir="target/war/WEB-INF/lib" />
+    <copy todir="target/war/WEB-INF/lib">
+		<fileset dir="${sc.sdk}/WEB-INF/lib" includes="**/*.jar">
+			<!-- <exclude name="ant.jar"/> -->
+		</fileset>	
+	</copy>
+	<copy todir="target/war/WEB-INF/lib" overwrite="true">
+		<fileset refid="maven.fileset" />
+		<mapper type="flatten" />
+	</copy>
+	<copy todir="target/war/WEB-INF/classes" overwrite="true">
+		<fileset dir="target/classes" includes="**/*.class" />
+	</copy>
+	<copy todir="target/war/isomorphic">
+		<fileset dir="${sc.sdk}/isomorphic" />
+	</copy>
+	<copy todir="target/war/shared">
+		<fileset dir="${sc.sdk}/shared" />
+	</copy>
+	<copy file="${sc.sdk}/WEB-INF/iscTaglib.xml" tofile="target/war/WEB-INF/iscTaglib.xml" />
+	<copy file="${sc.sdk}/WEB-INF/classes/log4j.isc.config.xml" tofile="target/war/WEB-INF/classes/log4j.isc.config.xml" />
+	<copy file="${sc.sdk}/WEB-INF/classes/server.properties" tofile="target/war/WEB-INF/classes/server.properties" />
+	<copy file="src/main/webapp/index.jsp" tofile="target/war/index.jsp" />
+	<copy file="src/main/webapp/WEB-INF/web.xml" tofile="target/war/WEB-INF/web.xml" />
+	<copy todir="target/war/WEB-INF/classes">
+     <fileset dir="src/main/resources" >
+      <include name="**/*.xml"/>
+      <include name="**/*.csv"/>
+      <include name="**/*.ftl"/>
+      <include name="**/*.properties"/>
+      <exclude name="*installed*"/>
+      <exclude name="ds/**"/>
+     </fileset>
+    </copy>
+    <copy todir="target/war">
+		<fileset dir="src/main/webapp" includes="**/*.jsp" />
+		<fileset dir="src/main/webapp" includes="**/*.html" />
+	</copy>
+    <copy todir="target/war/doc">
+	  <fileset dir="src/main/resources/doc" includes="*.pdf">
+	  </fileset>
+    </copy>
+	<mkdir dir="target/war/images"/>
+	<copy todir="target/war/images">
+      <fileset dir="src/main/resources/images" includes="*.svg"/>
+      <fileset dir="src/main/resources/images" includes="*.jpg"/>
+      <fileset dir="src/main/resources/images" includes="*.png"/>
+	  <fileset dir="src/main/resources/images" includes="*.gif"/>
+	  <fileset dir="src/main/resources/images" includes="*.ico"/>
+    </copy>
+	<mkdir dir="target/war/images/direction"/>
+	<copy todir="target/war/images/direction">
+      <fileset dir="src/main/resources/images/direction" includes="*.png"/>
+    </copy>
+	<copy todir="target/war/isomorphic/skins/Tahoe/images/actions">
+      <fileset dir="src/main/resources/images/actions" includes="*.png"/>
+    </copy>
+	<mkdir dir="target/war/isomorphic/skins/Tahoe/images/Menu/actions"/>
+	<copy todir="target/war/isomorphic/skins/Tahoe/images/Menu/actions">
+      <fileset dir="src/main/resources/images/actions" includes="*.png"/>
+    </copy>
+	<mkdir dir="target/war/css" />
+    <copy todir="target/war/css">
+	  <fileset dir="src/main/resources/css" includes="*.css">
+	  </fileset>
+    </copy>
+    <copy todir="target/war/shared/ds">
+		<fileset dir="src/main/resources/ds" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/as" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/dm" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rc" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rsh" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rsj" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rg" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rj" includes="*.ds.xml" />
+		<fileset dir="src/main/resources/ds/rt" includes="*.ds.xml" />
+	</copy>
+    <copy todir="target/war/data_flat">
+		<fileset dir="data_flat" includes="**/*.xml" />
+		<fileset dir="data_flat" includes="**/*.csv" />
+	</copy>
+    <copy todir="target/war/data_hierarchy">
+		<fileset dir="data_hierarchy" includes="**/*.json" />
+		<fileset dir="data_hierarchy" includes="**/*.xml" />
+		<fileset dir="data_hierarchy" includes="**/*.csv" />
+	</copy>
+    <copy todir="target/war/applications">
+		<fileset dir="applications" includes="**/*.*" />
+	</copy>
+    <copy todir="target/war/documents">
+		<fileset dir="documents" includes="**/*.*" />
+	</copy>
+    <copy todir="target/war/js">
+		<fileset dir="src/main/webapp/js" includes="**/*.js" />
+		<fileset dir="src/main/webapp/js" includes="**/*.map" />
+	</copy>
+	<copy todir="target/war/doc/api">
+		<fileset dir="${apl.doc}" />
+	</copy>
+  </target>
+
+  <target name="maven_compile" description="Maven Compile">
+	<exec executable="${maven.home}/bin/mvn" spawn="false">
+		<arg value="compile" />
+	</exec>
+  </target>
+
+  <target name="ts_compile" description="TypeScript Compile">
+	<exec executable="${tsc.bin}" spawn="false" dir="src/main/webapp/js">
+		<arg value="--project" />
+		<arg value="tsconfig.json" />
+	</exec>
+  </target>
+ 
+  <target name="dev_war">
+	<antcall target="maven_compile" />
+	<antcall target="ts_compile" />
+	<antcall target="app_war" />
+    <zip destfile="${apl.jar}/${app.name}" basedir="target/war" />
+  </target>
+
+  <target name="war-file-exists" unless="war.file.exists">
+    <available property="war.file.exists" file="${apl.jar}/${app.name}"/>
+  </target>
+
+  <target name="tomcat-home-exists" unless="tch.file.exists">
+    <available property="tch.file.exists" file="${tomcat.home}/logs"/>
+  </target>
+
+  <target name="browser_mac" description="Launch Mac OS Browser" depends="tomcat-home-exists"  if="${tch.file.exists}">
+	<exec executable="bin/chrome_mac.sh" spawn="true" />
+  </target>
+
+  <macrodef name="tomcatstart">
+   <sequential>
+     <exec executable="${tomcat.home}/bin/startup.sh">
+     </exec>
+   </sequential>
+  </macrodef>
+
+  <macrodef name="tomcatstop">
+   <sequential>
+     <exec executable="${tomcat.home}/bin/shutdown.sh">
+     </exec>
+   </sequential>
+  </macrodef>
+
+  <target name="deploy_mac" description="Deploy the war file on Mac OS." depends="war-file-exists"  if="${war.file.exists}">
+	<tomcatstop />
+	<sleep seconds="2"/>
+	<delete>
+      <fileset dir="${tomcat.home}/logs" includes="*.log"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.txt"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.out"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.xml"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.html"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.csv"/>
+    </delete>
+	<delete file="${tomcat.home}/webapps/${app.name}" failonerror="false"/>
+	<delete dir="${tomcat.home}/webapps/${app.base}" verbose="false" failonerror="true"/>
+	<copy todir="${tomcat.home}/webapps" file="${apl.jar}/${app.name}" />
+	<tomcatstart />
+	<sleep seconds="5"/>
+	<exec executable="bin/chrome_mac.sh" spawn="true" />
+  </target>
+
+  <target name="patch_classes" depends="classes-folder-exists" description="Deploys classes patch to ${TOMCAT_HOME}">
+	<tomcatstop />
+	<sleep seconds="2"/>
+	<delete>
+      <fileset dir="${tomcat.home}/logs" includes="*.log"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.txt"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.out"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.xml"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.html"/>
+      <fileset dir="${tomcat.home}/logs" includes="*.csv"/>
+    </delete>
+	<delete dir="${tomcat.home}/webapps/${app.base}/WEB-INF/classes/com" failonerror="false"/>
+    <copy todir="${tomcat.home}/webapps/${app.base}/WEB-INF/classes/com">
+		<fileset dir="target/classes/com" />
+	</copy>
+	<tomcatstart />
+	<sleep seconds="5"/>
+	<exec executable="bin/chrome_mac.sh" spawn="true" />
+  </target>
+
+  <target name="patch_ui" description="Deploys UI patch to ${TOMCAT_HOME}">
+    <copy todir="${tomcat.home}/webapps/${app.base}">
+		<fileset dir="src/main/webapp" includes="**/*.jsp" />
+		<fileset dir="src/main/webapp" includes="**/*.html" />
+	</copy>
+    <copy todir="${tomcat.home}/webapps/${app.base}/js">
+		<fileset dir="src/main/webapp/js" includes="**/*.js" />
+	</copy>
+	<exec executable="bin/chrome_mac.sh" spawn="true" />
+  </target>
+
+  <target name="clean" description="Cleans this project">
+    <delete dir="target" failonerror="false" />
+	<delete file="${apl.jar}/${app.name}" failonerror="false"/>
+  </target>
+
+</project>

@@ -1,0 +1,8 @@
+<DataSource ID="RG-SuggestList" serverConstructor="com.redis.app.redis_app_studio.rg.SuggestListDS">
+ <fields>
+  <field name="_suggest" title="Suggestion" type="text" editorType="ComboBoxItem" />
+  <field name="payload" title="Payload" type="text" hidden="true" />
+  <field name="score" title="Score" type="double" hidden="true" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

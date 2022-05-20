@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Maven Targets:
+ http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+ mvn install        Install the package into the local repository.
+-->
+<!-- Maven Guide to uploading artifacts to the Central Repository
+http://maven.apache.org/guides/mini/guide-central-repository-upload.html
+http://www.sonatype.org/nexus/
+-->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.redis.maven</groupId>
+	<artifactId>parent-pom</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>App Studio Super POM</name>
+	<description>This contains common build settings for all projects.</description>
+	<properties>
+		<skipTests>true</skipTests>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<repositories>
+		<repository>
+			<id>jetty</id>
+			<name>Jetty Maven Repository</name>
+			<layout>default</layout>
+			<url>http://oss.sonatype.org/content/groups/jetty/</url>
+		</repository>
+		<repository>
+			<id>sourceforge</id>
+			<url>http://oss.sonatype.org/content/groups/sourceforge/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<!-- http://maven.apache.org/plugins/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+			<plugin> 
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>17</release>
+				<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/pass-compiler-arguments.html -->
+					<compilerArgs>
+            			<arg>-Xlint:all</arg>
+          			</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<skipTests>${skipTests}</skipTests>
+				</configuration>
+			</plugin>
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+			<!-- https://maven.apache.org/plugins/maven-shade-plugin/shade-mojo.html -->
+			<!-- https://maven.apache.org/plugins/maven-shade-plugin/examples/includes-excludes.html -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.2.4</version>
+			</plugin>
+			<plugin>
+          		<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+			</plugin>
+        	<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        	<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.0.0-M1</version>
+			</plugin>
+        	<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.0.0-M2</version>
+			</plugin>
+			<plugin>
+				<!-- http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html -->
+				<groupId>org.apache.maven.plugins</groupId>
+   				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<quiet>true</quiet>
+					<header>App Studio Framework</header>
+					<doctitle>App Studio Framework</doctitle>
+   					<windowtitle>App Studio Framework</windowtitle>
+        			<doclint>all,-missing</doclint>
+				</configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+</project>

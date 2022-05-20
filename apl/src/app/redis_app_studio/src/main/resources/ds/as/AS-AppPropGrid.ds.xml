@@ -1,0 +1,7 @@
+<DataSource ID="AS-AppPropGrid" serverConstructor="com.redis.app.redis_app_studio.ds.AppPropGridDS">
+ <fields>
+  <field name="name" title="Name" type="integer" primaryKey="true" hidden="true" />
+  <field name="value" title="Value" type="text" hidden="true" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

@@ -1,0 +1,14 @@
+type_name,file_extension,mime_type,url_pattern,icon_name
+MS Word,.doc,application/msword,,Word
+MS Word,.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document,,Word
+MS Excel,.xls,application/vnd.ms-excel,,Excel
+MS Excel,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,,Excel
+MS Excel,.csv,application/vnd.ms-excel,,Excel
+MS PowerPoint,.ppt,application/vnd.ms-powerpoint,,PowerPoint
+MS PowerPoint,.pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation,,PowerPoint
+MS Visio,.vsd,application/vnd.visio,,Visio
+MS Project,.mpp,application/vnd.ms-project,,Project
+Adobe PDF,.pdf,application/pdf,,PDF
+XML,.xml,text/xml,,XML
+Text,.txt,text/plain,,Text
+Unknown,.*,application/unknown,,Unknown

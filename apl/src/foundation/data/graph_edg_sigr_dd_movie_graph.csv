@@ -1,0 +1,9 @@
+row_type[Text](Row Type),label_name[Text](Label Name),schema_items[Text](Schema Items),edge_name[Text](Edge Name),src_vertex_name[Text](Source Vertex Name),dst_vertex_name[Text](Destination Vertex Name),id[Text](Id),role[Text](Role),year[Text](Year)
+S,Composer,id|role|year,,,,,,
+S,Actor,id|role|year,,,,,,
+S,Director,id|role|year,,,,,,
+E,Actor,,Actor,Movie,Principal,pr000001,Actor,1971
+E,Actor,,Actor,Movie,Principal,pr000001,Actor,1971
+E,Actor,,Actor,Movie,Principal,pr000001,Actor,1971
+E,Composer,,Composer,Movie,Principal,pr000003,Composer,1971
+E,Director,,Director,Movie,Principal,pr000002,Director,1971

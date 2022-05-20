@@ -1,0 +1,13 @@
+<DataSource ID="RG-RelSchemaGrid" serverConstructor="com.redis.app.redis_app_studio.rg.RelSchemaGridDS">
+ <fields>
+  <field name="item_name" title="Name" type="text" primaryKey="true" canEdit="false" frozen="true" width="175" />
+  <field name="item_type" title="Type" type="text" canEdit="false" frozen="true" width="75" />
+  <field name="item_title" title="Title" type="text" canEdit="false" width="150" />
+  <field name="isPrimary" title="Primary" type="boolean" width="50" />
+  <field name="isRequired" title="Required" type="boolean" width="60" />
+  <field name="isGraphType" title="Graph Type" type="boolean" width="70" />
+  <field name="isGraphTitle" title="Graph Title" type="boolean" width="70" />
+  <field name="isGraphWeight" title="Graph Weight" type="boolean" width="90" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

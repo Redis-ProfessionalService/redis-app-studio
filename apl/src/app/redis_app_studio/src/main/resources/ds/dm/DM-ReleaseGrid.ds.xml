@@ -1,0 +1,10 @@
+<DataSource ID="DM-ReleaseGrid" serverConstructor="com.redis.app.redis_app_studio.dm.ReleaseGridDS">
+ <fields>
+  <field name="release_number" title="Release Number" type="text" primaryKey="true"  />
+  <field name="release_date" title="Release Date" type="text" />
+  <field name="developer_name" title="Developer Name" type="text" />
+  <field name="change_description" title="Change Description" type="text" />
+  <field name="redis_dependencies" title="Redis Dependencies" type="text" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

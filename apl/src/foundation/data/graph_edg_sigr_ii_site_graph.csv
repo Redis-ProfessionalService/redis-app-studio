@@ -1,0 +1,4 @@
+row_type[Text](Row Type),label_name[Text](Label Name),schema_items[Text](Schema Items),edge_name[Text](Edge Name),src_vertex_name[Text](Source Vertex Name),dst_vertex_name[Text](Destination Vertex Name),LinksTo[Text]
+E,LinksTo,,LinksTo,JGraphT,Wikipedia,Internet
+E,LinksTo,,LinksTo,Google,JGraphT,Internet
+E,LinksTo,,LinksTo,Google,Wikipedia,Internet

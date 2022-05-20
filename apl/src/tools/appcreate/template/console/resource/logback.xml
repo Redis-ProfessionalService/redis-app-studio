@@ -1,0 +1,29 @@
+<!-- ${maven_title} Logback Configuration Properties -->
+<!-- http://logback.qos.ch/manual/configuration.html -->
+<configuration scan="true" scanPeriod="5 minutes" >
+ <!-- http://logback.qos.ch/manual/appenders.html -->
+ <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+  <file>log/${maven_artifact_id}.log</file>
+  <encoder>
+   <pattern>%date %level [%thread] %logger{40} - %msg%n</pattern>
+  </encoder>
+ </appender>
+ <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  <encoder>
+   <pattern>%logger{40} - %msg%n</pattern>
+  </encoder>
+ </appender>
+ <!-- Supported Levels: ALL, TRACE, DEBUG, INFO, WARN, ERROR or OFF -->
+ <logger name="${maven_group_id}.${maven_artifact_id}.Main" level="INFO">
+  <appender-ref ref="STDOUT" />
+ </logger>
+ <logger name="${maven_group_id}.${maven_artifact_id}" level="TRACE">
+  <appender-ref ref="FILE" />
+ </logger>
+ <logger name="com.redis.foundation" level="ERROR">
+  <appender-ref ref="FILE" />
+ </logger>
+ <logger name="com.redis.ds" level="ERROR">
+  <appender-ref ref="FILE" />
+ </logger>
+</configuration>

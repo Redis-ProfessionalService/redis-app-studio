@@ -1,0 +1,9 @@
+row_type[Text](Row Type),label_name[Text](Label Name),schema_items[Text](Schema Items),id[Text](Id),title[Text](Title),year[Text](Year),genres[Text](Genres),name[Text](Name),birth_year[Text](Birth Year),professions[Text](Professions)
+S,Movie,id|title|year|genres,,,,,,,
+S,Principal,id|name|birth_year|professions,,,,,,,
+V,Movie,,tt0068646,The Godfather,1972,Crime,,,
+V,Principal,,nm0000008,,,,Marlon Brando,1924,actor
+V,Principal,,nm0000199,,,,Al Pacino,1940,actor
+V,Principal,,nm0000380,,,,Robert Duvall,1931,actor
+V,Principal,,nm0000065,,,,Nino Rota,1911,composer
+V,Principal,,nm0000338,,,,Francis Ford Coppola,1939,producer

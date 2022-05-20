@@ -1,0 +1,12 @@
+<DataDoc>
+ <Item type="Integer" name="sku" title="SKU" dataFormat="#" isPrimary="true" isVisible="true"/>
+ <Item type="Text" name="name" title="Name" isVisible="true"/>
+ <Item type="Text" name="type" title="Type" isVisible="true"/>
+ <Item type="DateTime" name="activeUpdateDate" title="Active Date" dataFormat="MMM-dd-yyyy HH:mm:ss" isVisible="true"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" dataFormat="###,###.####" isVisible="true"/>
+ <Item type="Text" name="shortDescription" title="Short Description" isVisible="true"/>
+ <Item type="Text" name="longDescription" title="Long Description" isVisible="true"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" isVisible="true"/>
+ <Item type="Text" name="department" title="Department" isVisible="true"/>
+ <Item type="Text" name="color" title="Color" isVisible="true"/>
+</DataDoc>

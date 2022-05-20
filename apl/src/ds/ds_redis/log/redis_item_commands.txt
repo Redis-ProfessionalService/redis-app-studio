@@ -1,0 +1,47 @@
+SET MarkerStart 'Add & Get DataItem' EX 1
+SET ASRC:RC:ST:DI:MN:message_field:TE:M:P 'Hello World!|Good Morning!|Good Afternoon!'
+GET ASRC:RC:ST:DI:MN:message_field:TE:M:P
+MEMORY USAGE ASRC:RC:ST:DI:MN:message_field:TE:M:P
+SET MarkerFinish '[43630 ms - 132 bytes] Add & Get DataItem' EX 1
+SET MarkerStart 'Update DataItem' EX 1
+SET ASRC:RC:ST:DI:MN:message_field:TE:M:P 'Hello World!|Good Morning!|Good Afternoon!|Good Evening!'
+GET ASRC:RC:ST:DI:MN:message_field:TE:M:P
+MEMORY USAGE ASRC:RC:ST:DI:MN:message_field:TE:M:P
+SET MarkerFinish '[8 ms - 152 bytes] Update DataItem' EX 1
+DEL ASRC:RC:ST:DI:MN:message_field:TE:M:P
+SET MarkerStart 'Message DataItem' EX 1
+SET ASRC:RC:ST:DI:MN:message_field:TE:S:P 'Another message or readiness'
+GET ASRC:RC:ST:DI:MN:message_field:TE:S:P
+MEMORY USAGE ASRC:RC:ST:DI:MN:message_field:TE:S:P
+SET MarkerFinish '[44429 ms - 118 bytes] Message DataItem' EX 1
+DEL ASRC:RC:ST:DI:MN:message_field:TE:S:P
+SET MarkerStart 'Multi-value DataItem' EX 1
+SADD ASRC:RC:SE:DI:MN:fruit_field:TE:M:P Apple Orange Banana Peach
+SMEMBERS ASRC:RC:SE:DI:MN:fruit_field:TE:M:P
+MEMORY USAGE ASRC:RC:SE:DI:MN:fruit_field:TE:M:P
+SET MarkerFinish '[8 ms - 336 bytes] Multi-value DataItem' EX 1
+DEL ASRC:RC:SE:DI:MN:fruit_field:TE:M:P
+SET MarkerStart 'Secret DataItem' EX 1
+SET ASRC:RC:ST:DI:MN:message_field:TE:S:E ZnikdyMTZI+f2Jw3fZRq0fv39gWzMdkIWhjmOwd0IF4SieXnEXvlpA==
+GET ASRC:RC:ST:DI:MN:message_field:TE:S:E
+MEMORY USAGE ASRC:RC:ST:DI:MN:message_field:TE:S:E
+SET MarkerFinish '[83 ms - 152 bytes] Secret DataItem' EX 1
+DEL ASRC:RC:ST:DI:MN:message_field:TE:S:E
+SET MarkerStart 'Secret Multi-value DataItem' EX 1
+SET ASRC:RC:ST:DI:MN:message_field:TE:M:E r8cLjp95/c2fGD6OGXpJiH50AGqKKpZlpwmyuIc8HBgxj7q/OwYCXw==
+GET ASRC:RC:ST:DI:MN:message_field:TE:M:E
+MEMORY USAGE ASRC:RC:ST:DI:MN:message_field:TE:M:E
+SET MarkerFinish '[70694 ms - 152 bytes] Secret Multi-value DataItem' EX 1
+DEL ASRC:RC:ST:DI:MN:message_field:TE:M:E
+SET MarkerStart 'Unique DataItem Values' EX 1
+PFADD ASRC:RC:HL:DI:MN:fruit_field:TE:S:P Apple
+PFADD ASRC:RC:HL:DI:MN:fruit_field:TE:S:P Orange
+PFADD ASRC:RC:HL:DI:MN:fruit_field:TE:S:P Banana
+PFADD ASRC:RC:HL:DI:MN:fruit_field:TE:S:P Peach
+PFADD ASRC:RC:HL:DI:MN:fruit_field:TE:S:P Apple
+MEMORY USAGE ASRC:RC:HL:DI:MN:fruit_field:TE:S:P
+SET MarkerFinish '[15 ms - 128 bytes] Unique DataItem Values' EX 1
+DEL ASRC:RC:HL:DI:MN:fruit_field:TE:S:P
+SET DeleteTest Value
+DEL DeleteTest
+DEL "Missing Key"

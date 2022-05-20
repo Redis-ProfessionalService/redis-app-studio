@@ -1,0 +1,7 @@
+com.redis.ds.ds_redis
+com.redis.ds.ds_redis.core
+com.redis.ds.ds_redis.graph
+com.redis.ds.ds_redis.json
+com.redis.ds.ds_redis.search
+com.redis.ds.ds_redis.shared
+com.redis.ds.ds_redis.time_series

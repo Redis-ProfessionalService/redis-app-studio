@@ -1,0 +1,10 @@
+name[Undefined](Dish Name),vegetarian[Boolean](Is Vegetarian),calories[Integer](Calories),type[Undefined](Meal Type)
+pork,false,800,MEAT
+beef,false,700,MEAT
+chicken,false,400,MEAT
+french fries,true,530,OTHER
+rice,true,350,OTHER
+season fruit,true,120,OTHER
+pizza,true,550,OTHER
+prawns,false,300,FISH
+salmon,false,450,FISH

@@ -1,0 +1,72 @@
+<fields>
+ <field name="common_vertex_src_id" title="Vertex Src Id" type="text" hidden="true"/>
+ <field name="common_vertex_dst_id" title="Vertex Dst Id" type="text" hidden="true"/>
+ <field name="common_edge_direction" title="Direction" type="image" imageURLPrefix="direction/" imageURLSuffix=".png" />
+ <field name="common_id" title="Id" type="text" required="true" primaryKey="true"/>
+ <field name="common_type" title="Edge Type" type="text" editorType="SelectItem">
+  <valueMap>
+   <value>pr000018</value>
+   <value>pr000017</value>
+   <value>pr000019</value>
+   <value>pr000014</value>
+   <value>pr000058</value>
+   <value>pr000013</value>
+   <value>pr000057</value>
+   <value>pr000016</value>
+   <value>pr000015</value>
+   <value>pr000010</value>
+   <value>pr000054</value>
+   <value>pr000053</value>
+   <value>pr000012</value>
+   <value>pr000056</value>
+   <value>pr000011</value>
+   <value>pr000055</value>
+   <value>pr000007</value>
+   <value>pr000006</value>
+   <value>pr000009</value>
+   <value>pr000008</value>
+   <value>pr000003</value>
+   <value>pr000047</value>
+   <value>pr000002</value>
+   <value>pr000046</value>
+   <value>pr000005</value>
+   <value>pr000049</value>
+   <value>pr000004</value>
+   <value>pr000048</value>
+   <value>pr000043</value>
+   <value>pr000042</value>
+   <value>pr000001</value>
+   <value>pr000045</value>
+   <value>pr000044</value>
+   <value>pr000050</value>
+   <value>pr000052</value>
+   <value>pr000051</value>
+   <value>pr000039</value>
+   <value>pr000036</value>
+   <value>pr000035</value>
+   <value>pr000038</value>
+   <value>pr000037</value>
+   <value>pr000032</value>
+   <value>pr000031</value>
+   <value>pr000034</value>
+   <value>pr000033</value>
+   <value>pr000041</value>
+   <value>pr000040</value>
+   <value>pr000029</value>
+   <value>pr000028</value>
+   <value>pr000025</value>
+   <value>pr000024</value>
+   <value>pr000027</value>
+   <value>pr000026</value>
+   <value>pr000021</value>
+   <value>pr000020</value>
+   <value>pr000023</value>
+   <value>pr000022</value>
+   <value>pr000030</value>
+  </valueMap>
+ </field>
+ <field name="common_vertex_name" title="Vertex Name" type="text"/>
+ <field name="contribution" title="Contribution" type="text"/>
+ <field name="employment_year" title="Employment Year" type="integer" format="#"/>
+ <field name="character_name" title="Character Name" type="text"/>
+</fields>

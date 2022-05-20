@@ -1,0 +1,537 @@
+{
+  "sku": 1597051,
+  "score": null,
+  "productId": null,
+  "name": "Buffalo - DriveStation\u2122 DDR 2TB External USB 3.0 Hard Drive - black",
+  "source": null,
+  "type": "HardGood",
+  "startDate": "2017-02-15",
+  "new": false,
+  "active": true,
+  "lowPriceGuarantee": true,
+  "activeUpdateDate": "2017-10-16T19:28:02",
+  "regularPrice": 149.99,
+  "salePrice": 149.99,
+  "clearance": false,
+  "onSale": false,
+  "planPrice": null,
+  "priceWithPlan": [],
+  "contracts": [],
+  "priceRestriction": null,
+  "priceUpdateDate": "2019-01-28T10:51:39",
+  "digital": false,
+  "preowned": false,
+  "carriers": [],
+  "planFeatures": [],
+  "devices": [],
+  "carrierPlans": [],
+  "technologyCode": null,
+  "carrierModelNumber": null,
+  "earlyTerminationFees": [],
+  "monthlyRecurringCharge": "",
+  "monthlyRecurringChargeGrandTotal": "",
+  "activationCharge": "",
+  "minutePrice": "",
+  "planCategory": null,
+  "planType": null,
+  "familyIndividualCode": null,
+  "validFrom": null,
+  "validUntil": null,
+  "carrierPlan": null,
+  "outletCenter": null,
+  "secondaryMarket": null,
+  "frequentlyPurchasedWith": [],
+  "accessories": [],
+  "relatedProducts": [],
+  "requiredParts": [],
+  "techSupportPlans": [],
+  "crossSell": [],
+  "salesRankShortTerm": null,
+  "salesRankMediumTerm": null,
+  "salesRankLongTerm": 137818,
+  "bestSellingRank": 140365,
+  "url": "https://api.bestbuy.com/click/-/1597051/pdp",
+  "spin360Url": null,
+  "mobileUrl": "https://api.bestbuy.com/click/-/1597051/pdp",
+  "affiliateUrl": null,
+  "addToCartUrl": "https://api.bestbuy.com/click/-/1597051/cart",
+  "affiliateAddToCartUrl": null,
+  "linkShareAffiliateUrl": "",
+  "linkShareAffiliateAddToCartUrl": "",
+  "search": null,
+  "upc": "747464127125",
+  "productTemplate": "External_Hard_Drives",
+  "categoryPath": [
+    {
+      "id": "cat00000",
+      "name": "Best Buy"
+    },
+    {
+      "id": "abcat0500000",
+      "name": "Computers & Tablets"
+    },
+    {
+      "id": "abcat0515000",
+      "name": "Computer Accessories & Peripherals"
+    },
+    {
+      "id": "abcat0504001",
+      "name": "Hard Drives, SSD & Storage"
+    },
+    {
+      "id": "pcmcat186100050005",
+      "name": "External Hard Drives"
+    }
+  ],
+  "alternateCategories": [],
+  "lists": [],
+  "customerReviewCount": null,
+  "customerReviewAverage": null,
+  "customerTopRated": null,
+  "format": null,
+  "freeShipping": true,
+  "freeShippingEligible": true,
+  "inStoreAvailability": true,
+  "inStoreAvailabilityText": "Store Pickup:",
+  "inStoreAvailabilityTextHtml": "<b>Store Pickup:</b>",
+  "inStoreAvailabilityUpdateDate": "2018-10-10T06:04:15",
+  "itemUpdateDate": "2019-02-08T06:25:37",
+  "onlineAvailability": true,
+  "onlineAvailabilityText": "Shipping: Usually ships in 2 business days",
+  "onlineAvailabilityTextHtml": "<b>Shipping:</b> Usually ships in 2 business days",
+  "onlineAvailabilityUpdateDate": "2018-10-10T06:04:15",
+  "releaseDate": null,
+  "shippingCost": 0.0,
+  "shipping": [
+    {
+      "ground": "",
+      "secondDay": 0.0,
+      "nextDay": 23.96,
+      "vendorDelivery": ""
+    }
+  ],
+  "shippingLevelsOfService": [
+    {
+      "serviceLevelId": 5,
+      "serviceLevelName": "One Day",
+      "unitShippingPrice": 23.96
+    },
+    {
+      "serviceLevelId": 4,
+      "serviceLevelName": "Two Day",
+      "unitShippingPrice": 0.0
+    }
+  ],
+  "specialOrder": false,
+  "shortDescription": "USB 3.0 interfaceHigh performance1 GB of DRAM cacheData transfer rates up to 5 Gbps",
+  "shortDescriptionHtml": "<li>USB 3.0 interface</li><li>High performance</li><li>1 GB of DRAM cache</li><li>Data transfer rates up to 5 Gbps</li>",
+  "class": "HARD DRIVES",
+  "classId": 166,
+  "subclass": "SO HARD DRIVES",
+  "subclassId": 950,
+  "department": "COMPUTERS",
+  "departmentId": 6,
+  "bestBuyItemId": "",
+  "protectionPlanTerm": "BUF",
+  "protectionPlanType": null,
+  "protectionPlanLowPrice": "",
+  "protectionPlanHighPrice": "",
+  "buybackPlans": [],
+  "protectionPlans": [],
+  "protectionPlanDetails": [],
+  "productFamilies": [],
+  "productVariations": [
+    {
+      "sku": "1597051",
+      "variations": [
+        {
+          "name": "Hard_Drives:Hard_Drive_Capacity",
+          "value": "2000 gigabytes"
+        }
+      ]
+    },
+    {
+      "sku": "6338112",
+      "variations": [
+        {
+          "name": "Hard_Drives:Hard_Drive_Capacity",
+          "value": "3000 gigabytes"
+        }
+      ]
+    }
+  ],
+  "aspectRatio": null,
+  "screenFormat": null,
+  "lengthInMinutes": null,
+  "mpaaRating": null,
+  "plot": null,
+  "plotHtml": null,
+  "studio": null,
+  "theatricalReleaseDate": null,
+  "description": null,
+  "manufacturer": "Buffalo",
+  "modelNumber": "HD-GD2.0U3",
+  "images": [
+    {
+      "rel": "Front_Standard",
+      "unitOfMeasure": "pixels",
+      "width": "500",
+      "height": "500",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sa.jpg"
+    },
+    {
+      "rel": "Front_Large",
+      "unitOfMeasure": "pixels",
+      "width": "160",
+      "height": "160",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sb.jpg"
+    },
+    {
+      "rel": "Alt_View_Standard_12",
+      "unitOfMeasure": "pixels",
+      "width": "500",
+      "height": "500",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051cv12a.jpg"
+    },
+    {
+      "rel": "Alt_View_Standard_11",
+      "unitOfMeasure": "pixels",
+      "width": "500",
+      "height": "500",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051cv11a.jpg"
+    },
+    {
+      "rel": "Front_Thumbnail",
+      "unitOfMeasure": "pixels",
+      "width": "54",
+      "height": "54",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_s.gif"
+    },
+    {
+      "rel": "Left_Standard",
+      "unitOfMeasure": "pixels",
+      "width": "500",
+      "height": "500",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051le.jpg"
+    },
+    {
+      "rel": "Front_Detail",
+      "unitOfMeasure": "pixels",
+      "width": "105",
+      "height": "105",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sc.jpg"
+    },
+    {
+      "rel": "Front_Medium",
+      "unitOfMeasure": "pixels",
+      "width": "70",
+      "height": "70",
+      "href": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051fp.gif"
+    }
+  ],
+  "image": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sa.jpg",
+  "largeFrontImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sb.jpg",
+  "mediumImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051fp.gif",
+  "thumbnailImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_s.gif",
+  "largeImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051_sb.jpg",
+  "alternateViewsImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051cv11a.jpg",
+  "angleImage": null,
+  "backViewImage": null,
+  "energyGuideImage": null,
+  "leftViewImage": "https://img.bbystatic.com/BestBuy_US/images/products/1597/1597051le.jpg",
+  "accessoriesImage": null,
+  "remoteControlImage": null,
+  "rightViewImage": null,
+  "topViewImage": null,
+  "albumTitle": "DriveStation\u2122 DDR 2TB External USB 3.0 Hard Drive",
+  "artistName": null,
+  "artistId": null,
+  "originalReleaseDate": null,
+  "parentalAdvisory": null,
+  "mediaCount": null,
+  "monoStereo": null,
+  "studioLive": null,
+  "condition": "New",
+  "inStorePickup": true,
+  "friendsAndFamilyPickup": true,
+  "homeDelivery": false,
+  "quantityLimit": 3,
+  "fulfilledBy": null,
+  "members": [],
+  "bundledIn": [],
+  "albumLabel": null,
+  "genre": null,
+  "color": "black",
+  "depth": null,
+  "dollarSavings": 0.0,
+  "percentSavings": "0.0",
+  "tradeInValue": "",
+  "height": "5 inches",
+  "orderable": "Available",
+  "weight": "35.2 ounces",
+  "shippingWeight": 2.78,
+  "width": "1.8 inches",
+  "warrantyLabor": "3 Years",
+  "warrantyParts": "3 Years",
+  "softwareAge": null,
+  "softwareGrade": null,
+  "platform": null,
+  "numberOfPlayers": null,
+  "softwareNumberOfPlayers": null,
+  "esrbRating": null,
+  "longDescription": "Back up important files from your PC or utilize your Mac&#8217;s Time Machine function with this versatile Buffalo Drivestation external hard drive. This device, which connects to your computer via a USB 3.0 cable, incorporates an innovative MegaCache unit, which speeds up file transfer. Store an array of multimedia files on this sleek, reliable 2TB Buffalo Drivestation external hard drive.",
+  "longDescriptionHtml": "Back up important files from your PC or utilize your Mac\u2019s Time Machine function with this versatile Buffalo Drivestation external hard drive. This device, which connects to your computer via a USB 3.0 cable, incorporates an innovative MegaCache unit, which speeds up file transfer. Store an array of multimedia files on this sleek, reliable 2TB Buffalo Drivestation external hard drive.<BR><BR><a href=\"https://www.bestbuy.com/site/buying-guides/null/pcmcat337000050001.c?id=pcmcat337000050001&type=category&id=pcmcat337000050001\" onclick=\"return popNew(this,960,800);\" title=\"Drives and Storage\" target=\"_blank\" name=\"&lid=PDP_lid=BuyingGuide_DrivesStorage_BoxNav_Planning_125020\"><img src=\"https://images.bestbuy.com/BestBuy_US/en_US/images/abn/2014/global/buyingguides/hard_drives/entry_points/PDP_Drives.png\" width=\"418 px\" height=\"90 px\" alt=\"Drives and Storage Buying Guide\"></a>",
+  "cast": [],
+  "crew": [],
+  "details": [
+    {
+      "name": "Hard Drive Capacity",
+      "value": "2000 gigabytes",
+      "values": [
+        "2000 gigabytes"
+      ]
+    },
+    {
+      "name": "Product Weight",
+      "value": "35.2 ounces",
+      "values": [
+        "35.2 ounces"
+      ]
+    },
+    {
+      "name": "Power Source",
+      "value": "AC adapter",
+      "values": [
+        "AC adapter"
+      ]
+    },
+    {
+      "name": "Security Features",
+      "value": "None",
+      "values": [
+        "None"
+      ]
+    },
+    {
+      "name": "Memory Card Type",
+      "value": "None",
+      "values": [
+        "None"
+      ]
+    },
+    {
+      "name": "Manufacturer's Warranty - Parts",
+      "value": "3 Years",
+      "values": [
+        "3 Years"
+      ]
+    },
+    {
+      "name": "Color",
+      "value": "black",
+      "values": [
+        "black"
+      ]
+    },
+    {
+      "name": "Additional Accessories Included",
+      "value": "USB 3.0 Cable, AC Adapter, Quick Setup Guide & Warranty Statement",
+      "values": [
+        "USB 3.0 Cable, AC Adapter, Quick Setup Guide & Warranty Statement"
+      ]
+    },
+    {
+      "name": "Rotational Speed",
+      "value": "5400 revolutions per minute",
+      "values": [
+        "5400 revolutions per minute"
+      ]
+    },
+    {
+      "name": "Storage Drive Type",
+      "value": "HDD",
+      "values": [
+        "HDD"
+      ]
+    },
+    {
+      "name": "Product Width",
+      "value": "1.8 inches",
+      "values": [
+        "1.8 inches"
+      ]
+    },
+    {
+      "name": "Interface(s)",
+      "value": "USB 3.0",
+      "values": [
+        "USB 3.0"
+      ]
+    },
+    {
+      "name": "Maximum Data Transfer Rate",
+      "value": "3000 megabytes per second",
+      "values": [
+        "3000 megabytes per second"
+      ]
+    },
+    {
+      "name": "Product Height",
+      "value": "5 inches",
+      "values": [
+        "5 inches"
+      ]
+    },
+    {
+      "name": "Minimum System Requirements",
+      "value": "Windows 10 / 8 / 7 / Vista/ XP; Mac OS X 10.5 or later",
+      "values": [
+        "Windows 10 / 8 / 7 / Vista/ XP; Mac OS X 10.5 or later"
+      ]
+    },
+    {
+      "name": "Cache Buffer Size",
+      "value": "1024 megabytes",
+      "values": [
+        "1024 megabytes"
+      ]
+    },
+    {
+      "name": "External Hard Drive Type",
+      "value": "Desktop",
+      "values": [
+        "Desktop"
+      ]
+    },
+    {
+      "name": "Color Category",
+      "value": "Black",
+      "values": [
+        "Black"
+      ]
+    },
+    {
+      "name": "Model Number",
+      "value": "MD537LL/A",
+      "values": [
+        "MD537LL/A"
+      ]
+    },
+    {
+      "name": "Included Software",
+      "value": "Buffalo Tools backup/security/utility software suite",
+      "values": [
+        "Buffalo Tools backup/security/utility software suite"
+      ]
+    },
+    {
+      "name": "Form Factor",
+      "value": "3.5 in.",
+      "values": [
+        "3.5 in."
+      ]
+    },
+    {
+      "name": "Product Name",
+      "value": "DriveStation\u2122 DDR 2TB External USB 3.0 Hard Drive",
+      "values": [
+        "DriveStation\u2122 DDR 2TB External USB 3.0 Hard Drive"
+      ]
+    },
+    {
+      "name": "Voice Assistant Built-in",
+      "value": "No",
+      "values": [
+        "No"
+      ]
+    },
+    {
+      "name": "Data Encryption",
+      "value": "No",
+      "values": [
+        "No"
+      ]
+    },
+    {
+      "name": "Manufacturer's Warranty - Labor",
+      "value": "3 Years",
+      "values": [
+        "3 Years"
+      ]
+    },
+    {
+      "name": "Brand",
+      "value": "Buffalo",
+      "values": [
+        "Buffalo"
+      ]
+    },
+    {
+      "name": "Number Of Drives Included",
+      "value": "1",
+      "values": [
+        "1"
+      ]
+    },
+    {
+      "name": "Internal Or External",
+      "value": "External",
+      "values": [
+        "External"
+      ]
+    }
+  ],
+  "includedItemList": [
+    {
+      "includedItem": "DriveStation\u2122 DDR 2TB External USB 3.0 Hard Drive"
+    },
+    {
+      "includedItem": "USB 3.0 Cable"
+    },
+    {
+      "includedItem": "Quick Setup Guide"
+    },
+    {
+      "includedItem": "AC Adapter"
+    },
+    {
+      "includedItem": "Warranty Statement"
+    }
+  ],
+  "features": [
+    {
+      "feature": "2 TB storage capacity\nProvides ample space for your music, movies and other files."
+    },
+    {
+      "feature": "USB 3.0 interface\nBackward compatible with USB 2.0 for a simple connection to your computer."
+    },
+    {
+      "feature": "Data transfer rates up to 5 Gbps via USB 3.0\nFor a quick response when updating files."
+    },
+    {
+      "feature": "Save feature\nSchedule automatic backups for your PC."
+    },
+    {
+      "feature": "High performance\nUtilizes 1 GB of DRAM cache for fast data transfers."
+    },
+    {
+      "feature": "Sleek modern design\nProvides durability and a sleek profile."
+    },
+    {
+      "feature": "Compatible with Mac and PC\nFor flexible installation options."
+    }
+  ],
+  "offers": [],
+  "marketplace": null,
+  "listingId": null,
+  "sellerId": null,
+  "shippingRestrictions": null,
+  "discs": [],
+  "commerceSku": 1597051,
+  "haulawayAvailable": null,
+  "proposition65WarningMessage": null,
+  "proposition65WarningType": "04",
+  "driveCapacityGb": 2000,
+  "driveConnectivity": "USB 3.0",
+  "powerSource": "AC adapter"
+}

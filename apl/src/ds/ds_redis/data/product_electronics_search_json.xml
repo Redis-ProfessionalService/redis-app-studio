@@ -1,0 +1,12 @@
+<DataDoc name="product_electronics" indexName="product_electronics" stopWords="data/stop-words.txt">
+ <Item type="Integer" name="sku" title="SKU" fieldWeight="0.5" isPrimary="true" isSortable="true" jPath="$.sku"/>
+ <Item type="Text" name="name" title="Name" fieldWeight="1.0" isStemmed="false" isSuggest="true" jPath="$.name"/>
+ <Item type="Text" name="type" title="Type" fieldWeight="0.5" isSortable="true" jPath="$.type"/>
+ <Item type="DateTime" name="activeUpdateDate" title="Active Date" fieldWeight="0.5" isSortable="true" dataFormat="yyyy-MM-dd'T'HH:mm:ss" jPath="$.activeUpdateDate"/>
+ <Item type="Double" name="regularPrice" title="Regular Price" fieldWeight="0.5" isSortable="true" jPath="$.regularPrice"/>
+ <Item type="Text" name="shortDescription" title="Short Description" fieldWeight="1.0" jPath="$.shortDescription"/>
+ <Item type="Text" name="longDescription" title="Long Description" fieldWeight="0.5" jPath="$.longDescription"/>
+ <Item type="Text" name="manufacturer" title="Manufacturer" fieldWeight="0.5" jPath="$.manufacturer"/>
+ <Item type="Text" name="department" title="Department" isSortable="true" isTag="true" jPath="$.department"/>
+ <Item type="Text" name="color" title="Color" isTag="true" jPath="$.color"/>
+</DataDoc>

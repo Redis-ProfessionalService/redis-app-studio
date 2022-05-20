@@ -1,0 +1,29 @@
+<DataSource ID="DM-AnalyzeGrid" serverConstructor="com.redis.app.redis_app_studio.dm.AnalyzeGridDS">
+ <fields>
+  <field name="name" title="Name" type="text" primaryKey="true" frozen="true" width="150"/>
+  <field name="type" title="Type" type="text" width="50" />
+  <field name="unique_count" title="Cardinality" type="integer" width="90" />
+  <field name="null_count" title="Null Count" type="integer" width="80" />
+  <field name="minimum" title="Minimum" type="text" width="70" />
+  <field name="maximum" title="Maximum" type="text" width="70" />
+  <field name="mean" title="Mean" type="text" width="70" />
+  <field name="median" title="Median" type="text" width="70" />
+  <field name="standard_deviation" title="Deviation" type="text" width="80" />
+  <field name="value_01" title="Value 1" type="text" width="100" />
+  <field name="count_01" title="Count 1" type="integer" width="50" />
+  <field name="percent_01" title="Percent 1" type="float" width="60" />
+  <field name="value_02" title="Value 2" type="text" width="100" />
+  <field name="count_02" title="Count 2" type="integer" width="50" />
+  <field name="percent_02" title="Percent 2" type="float" width="60" />
+  <field name="value_03" title="Value 3" type="text" width="100" />
+  <field name="count_03" title="Count 3" type="integer" width="50" />
+  <field name="percent_03" title="Percent 3" type="float" width="100" />
+  <field name="value_04" title="Value 4" type="text" width="100" />
+  <field name="count_04" title="Count 4" type="integer" width="50" />
+  <field name="percent_04" title="Percent 4" type="float" width="60" />
+  <field name="value_05" title="Value 5" type="text" width="100" />
+  <field name="count_05" title="Count 5" type="integer" width="50" />
+  <field name="percent_05" title="Percent 5" type="float" width="60" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

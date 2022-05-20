@@ -1,0 +1,9 @@
+<DataDoc retentionTime="0" isUncompressed="true" memoryChunkSize="4000" duplicatePolicy="BLOCK">
+ <Item type="DateTime" name="start_date" title="Start Date">2013-02-08</Item>
+ <Item type="DateTime" name="finish_date" title="Finish Date">2018-02-07</Item>
+ <Item type="Text" name="exchange_name" title="Exchange Name">NYSE</Item>
+ <Item type="Text" name="stock_symbol" title="Stock Symbol">GE</Item>
+ <Item type="Text" name="stock_event" title="Stock Event"/>
+ <Item type="Text" name="company_name" title="Company Name">General Electric Company</Item>
+ <Item type="Text" name="company_description" title="Company Description">General Electric Company is an American multinational conglomerate.</Item>
+</DataDoc>

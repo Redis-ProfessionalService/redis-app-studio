@@ -1,0 +1,9 @@
+<DataSource ID="RSJ-FacetGrid" serverConstructor="com.redis.app.redis_app_studio.rsj.FacetGridDS">
+ <fields>
+  <field name="id" title="Id" type="integer" primaryKey="true" hidden="true" />
+  <field name="parent_id" title="Parent Id" type="integer" hidden="true" foreignKey="RS-FacetGrid.id"  rootValue="0" />
+  <field name="field_name" title="Field Name" type="text" hidden="true" />
+  <field name="facet_name" title="Facet Name" type="text" />
+ </fields>
+ <generatedBy>AS DataSource Generator Jan-06-2022</generatedBy>
+</DataSource>

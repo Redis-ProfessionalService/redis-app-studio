@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Maven Targets:
+     http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference
+     mvn validate          Validate the project is correct and all necessary information is available.
+     mvn compile           Compile the source code of the project.
+     mvn test              Test the compiled source code using a suitable unit testing framework.
+     mvn source:jar        Creates source jar (you must manually copy to local repository).
+     mvn javadoc:jar       Creates JavaDoc jar (you must manually copy to local repository).
+     mvn package           Take the compiled code and package it into a JAR.
+     mvn install           Install the package into the local repository.
+     mvn assembly:single   Builds a single JAR that includes all dependencies.
+     mvn clean             Removes compiled objects from the target folder.
+    -->
+    <parent>
+        <groupId>com.redis.maven</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.0</version>
+        <relativePath>../../../pom/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>${maven_group_id}</groupId>
+    <artifactId>${maven_artifact_id}</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <organization>
+        <name>Redis</name>
+        <url>http://www.redis.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>Al Cole</name>
+            <email>al@redis.com</email>
+            <url>http://www.redis.com</url>
+            <organization>Redis</organization>
+            <organizationUrl>http://www.redis.com</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+    <licenses>
+		<license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${maven_group_id}.${maven_artifact_id}.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.redis</groupId>
+            <artifactId>foundation</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>

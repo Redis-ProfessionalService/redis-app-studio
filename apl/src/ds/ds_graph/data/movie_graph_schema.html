@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>IMDb Graph</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style type="text/css">
+   #rwgraph {
+    width: 780px;
+    height: 590px;
+    border: 1px solid lightgray;
+   }
+  </style>
+ </head>
+ <body>
+  <div id="rwgraph"></div>
+  <script type="text/javascript">
+   const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+   const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+   console.log("Window width, height (pixels): " + width + ", " + height);
+   var rwNodes = new vis.DataSet([
+     {id: "tt0068646", title: "Movie", label: "Crime", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000008", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000199", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0001735", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000065", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000338", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000380", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0078788", title: "Movie", label: "Drama", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0118632", title: "Movie", label: "Drama", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0316356", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000126", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0099348", title: "Movie", label: "Adventure", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0102798", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0103855", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0001365", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0052522", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000125", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000361", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000412", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000134", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0060009", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000129", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000685", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000384", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0790724", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt1631867", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm1289434", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000200", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0065100", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0499544", title: "Movie", label: "Comedy", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0447695", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm2799457", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0811242", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm2319871", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0112384", title: "Movie", label: "Adventure", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000165", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000158", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000102", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000438", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000599", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0117998", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000166", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000415", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000341", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000957", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000450", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "tt0090605", title: "Movie", label: "Action", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000116", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000244", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0000448", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0001663", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"},
+     {id: "nm0001021", title: "Principal", label: "", shape: "ellipse", color: "#97C2FC"}
+     ]);
+   var rwEdges = new vis.DataSet([
+     {from: "nm0000008", to: "tt0068646", label: "Actor", title: "Don Vito Corleone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000199", to: "tt0068646", label: "Actor", title: "Michael Corleone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0001735", to: "tt0068646", label: "Actor", title: "Connie Corleone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000065", to: "tt0068646", label: "Composer", title: "Composer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000338", to: "tt0068646", label: "Director", title: "Director", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000380", to: "tt0068646", label: "Actor", title: "Tom Hagen", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000380", to: "tt0078788", label: "Actor", title: "Lieutenant Colonel Bill Kilgore", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000380", to: "tt0118632", label: "Actor", title: "The Apostle E.F.", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000380", to: "tt0316356", label: "Actor", title: "Boss Spearman", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0316356", label: "Actor", title: "Charley Waite", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0316356", label: "Director", title: "Director", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0099348", label: "Actor", title: "Lieutenant John Dunbar", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0102798", label: "Actor", title: "Robin of Locksley", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0103855", label: "Actor", title: "Frank Farmer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0103855", label: "Director", title: "Director", color: "#97C2FC", arrows: "to"},
+     {from: "nm0001365", to: "tt0103855", label: "Actor", title: "Rachel Marron", color: "#97C2FC", arrows: "to"},
+     {from: "nm0001365", to: "tt0103855", label: "Singer", title: "Rachel Marron", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000126", to: "tt0052522", label: "Actor", title: "Eliot Ness", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000125", to: "tt0052522", label: "Actor", title: "Jim Malone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000361", to: "tt0052522", label: "Director", title: "Director", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000412", to: "tt0052522", label: "Actor", title: "George Stone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000134", to: "tt0052522", label: "Actor", title: "Al Capone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000134", to: "tt0068646", label: "Actor", title: "Vito Corleone", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000129", to: "tt0060009", label: "Actor", title: "Ethan Hunt", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000129", to: "tt0060009", label: "Producer", title: "Producer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000361", to: "tt0060009", label: "Director", title: "Director", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000685", to: "tt0060009", label: "Actor", title: "Jim Phelps", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000384", to: "tt0060009", label: "Composer", title: "Composer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000129", to: "tt0790724", label: "Actor", title: "Jack Reacher", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000380", to: "tt0790724", label: "Actor", title: "Cash", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000129", to: "tt1631867", label: "Actor", title: "Cage", color: "#97C2FC", arrows: "to"},
+     {from: "nm1289434", to: "tt1631867", label: "Actor", title: "Rita", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000200", to: "tt1631867", label: "Actor", title: "Master Sergeant Farell", color: "#97C2FC", arrows: "to"},
+     {from: "nm0065100", to: "tt1631867", label: "Composer", title: "Composer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0065100", to: "tt0499544", label: "Composer", title: "Composer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0447695", to: "tt0499544", label: "Actor", title: "Beca", color: "#97C2FC", arrows: "to"},
+     {from: "nm2799457", to: "tt0499544", label: "Actor", title: "Jesse", color: "#97C2FC", arrows: "to"},
+     {from: "nm0811242", to: "tt0499544", label: "Actor", title: "Chloe", color: "#97C2FC", arrows: "to"},
+     {from: "nm2319871", to: "tt0499544", label: "Actor", title: "Aubrey", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000165", to: "tt0112384", label: "Director", title: "Ron Howard", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000158", to: "tt0112384", label: "Actor", title: "Jim Lovell", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000102", to: "tt0112384", label: "Actor", title: "Jack Swigert", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000438", to: "tt0112384", label: "Actor", title: "Gene Kranz", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000599", to: "tt0112384", label: "Actor", title: "Marilyn Lovell", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000200", to: "tt0112384", label: "Actor", title: "Fred Haise", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000200", to: "tt0117998", label: "Actor", title: "Bill Harding", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000166", to: "tt0117998", label: "Actor", title: "Dr. Jo Harding", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000415", to: "tt0117998", label: "Actor", title: "Dr. Melissa Reeves", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000341", to: "tt0117998", label: "Writer", title: "Michael Crichton", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000957", to: "tt0117998", label: "Director", title: "Jan de Bont", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000450", to: "tt0117998", label: "Actor", title: "Dustin Davis", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000200", to: "tt0090605", label: "Actor", title: "Private Hudson", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000116", to: "tt0090605", label: "Director", title: "James Cameron", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000116", to: "tt0090605", label: "Writer", title: "Writer", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000244", to: "tt0090605", label: "Actor", title: "Ripley", color: "#97C2FC", arrows: "to"},
+     {from: "nm0000448", to: "tt0090605", label: "Actor", title: "Bishop", color: "#97C2FC", arrows: "to"},
+     {from: "nm0001663", to: "tt0090605", label: "Actor", title: "Burke", color: "#97C2FC", arrows: "to"},
+     {from: "nm0001021", to: "tt0090605", label: "Actor", title: "Lambert", color: "#97C2FC", arrows: "to"}
+     ]);
+  var rwContainer = document.getElementById("rwgraph");
+  var rwData = { nodes: rwNodes, edges: rwEdges};
+  var rwOptions = {};
+  var rwNetwork = new vis.Network(rwContainer, rwData, rwOptions);
+  </script>
+ </body>
+</html>
